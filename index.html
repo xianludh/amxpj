@@ -124,7 +124,7 @@
 
 <body>
     <div class="box">
-         <canvas id="canvas1" ></canvas>
+         <!-- <canvas id="canvas1" ></canvas> -->
         <div class="middleBox">
             <div class=" loadingTopBox">
                 <div class="loadingTop">
@@ -140,6 +140,7 @@
             <div class="timeBox" ><span id="time" ></span><span >秒后进入网站</span></div>
         </div>
         <script type="text/javascript">  
+        console.log(window.location.origin)
             var k=3;  
             // var arr=['x98880.com','x98882.com','x98885.com','x98886.com','x98889.com'];
             var arr=['https://x98880.com/','https://x98882.com/','https://x98885.com/','https://x98886.com/','https://x98889.com/'];
@@ -150,12 +151,14 @@
           changeTime();  
         var inId=window.setInterval("changeTime()",1000);
         function autoRedirect(){   
+            console.log(window.location)
              window.location.href=arr[Math.floor((Math.random()*arr.length))]
        
         }  
         window.setInterval("autoRedirect()",3000);
          function onGw(){
-             window.location.href='https:'+arr[Math.floor((Math.random()*arr.length))]
+            console.log(window.location)
+            window.location.href=arr[Math.floor((Math.random()*arr.length))]
          }
      
         </script>
