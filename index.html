@@ -141,7 +141,8 @@
         </div>
         <script type="text/javascript">  
             var k=3;  
-            var arr=['x98880.com','x98882.com','x98885.com','x98886.com','x98889.com'];
+            // var arr=['x98880.com','x98882.com','x98885.com','x98886.com','x98889.com'];
+            var arr=['https://x98880.com/','https://x98882.com/','https://x98885.com/','https://x98886.com/','https://x98889.com/'];
             function changeTime(){
            document.getElementById("time").innerHTML=k;   
            k--; 
@@ -149,11 +150,12 @@
           changeTime();  
         var inId=window.setInterval("changeTime()",1000);
         function autoRedirect(){   
-        location.href='https:'+arr[Math.floor((Math.random()*arr.length))] 
+             window.location.href=arr[Math.floor((Math.random()*arr.length))]
+       
         }  
         window.setInterval("autoRedirect()",3000);
          function onGw(){
-             self.location='https:'+arr[Math.floor((Math.random()*arr.length))]
+             window.location.href='https:'+arr[Math.floor((Math.random()*arr.length))]
          }
      
         </script>
