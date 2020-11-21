@@ -1,0 +1,75 @@
+#app{max-width:750px;margin:0 auto;z-index:2;min-height: 100%;background: #fff;}
+#app .download_zone{position: relative;}
+#app .download_zone .buttons{display: block;position: absolute;width: 100%;left: 0;top:42vw;text-align: center}
+#app .download_zone .buttons a{width: 42%;overflow: hidden;text-indent: -999em;font-size: 0;cursor: pointer;animation: heart_beat .8s infinite linear;display: inline-block}
+#app .download_zone .buttons a:last-child{animation-delay: .4s}
+#window{width: 100vw;height: 100vh;position: fixed;z-index: 999;left: 0;top: 0;max-height: 0;overflow: hidden;}
+.download_zone .bg .info{
+    position: absolute;
+    width: 100%;
+}
+.download_zone .bg .info p{
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+#window .bg{width: 100vw;height: 100vh;position: relative;background: #000;opacity: 0;transition: all .6s}
+#window .box{position: absolute;width: 100vw;height: 100vh;left: 0;top: 40px;opacity: 0;transition: all .6s}
+#window .content{max-width: 750px;height: 100vh;margin: 0 auto;display: flex;flex-direction: column;justify-content: center}
+#window .img_box{margin: 0 auto;position: relative}
+#window .xr_button{height: 30vw;position: absolute;left: 0;bottom: 0;display: block;width: 100%}
+#window.show{max-height: 100vh}
+#window.show .bg{opacity: .6;}
+#window.show .box{opacity: 1;top: 0}
+.hide{position: absolute;left: -100vw;top: -100vh;}
+.hide img{width: 1px;height: 1px;}
+#app #xr_back{display: block;width:20vw;height: 100%;position: absolute;display: block;left: 0;top: 0;}
+app #slider{position: absolute;top: 0;left: 0;max-width:750px;width: 100vw;padding: 10px}
+.ios_show,.and_show{display: none}
+#xinren_list{position: fixed;width: 100vw;height: 100vh;overflow-y: auto;left: 0;top: 0;display: none}
+#open_safari{position: fixed;background: rgba(0,0,0,.85);color:#fff;width: 100%;height: 100%;left: 0;top: 0;z-index: 999;display: none}
+#open_safari .w750{padding: 30px;}
+#open_safari a#copyBtn{max-width: 30vw;display: block;margin: 10px auto}
+#open_safari .safari_info{max-width: 70vw;margin: 20px auto;}
+#app .bar{position: fixed;width: 100%;left: 0;top: 0;}
+.bgImg {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.bg1{
+    width: 100vw;
+    height: 74.93vw;
+    background-image: url(../picture/1.png);
+
+}
+.bg2{
+    position: relative;
+    width: 100vw;
+    height: 70.53vw;
+    background-image: url(../picture/3.png);
+    background-size: cover;
+}
+.top {
+    display: block;
+    vertical-align: middle;
+}
+#install {
+    position: absolute;
+    top: 23vw;
+    left: 25.87vw;
+    width: 48.26vw;
+    height: 8.8vw;
+    background-image: url(../picture/anzhuang.png);
+}
+.bg3{
+    width: 100vw;
+    height: 141.33vw;
+    background-image: url(../picture/4.png);
+}
+.bg4{
+    width: 100vw;
+    height: 219.45vw;
+    background-image: url(../picture/5.png);
+}

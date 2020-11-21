@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>下载送好礼</title>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no"
+        name="viewport" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-orientation" content="portrait" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#4c516a" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="email=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-orientation" content="portrait" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <link rel="icon" href="data:image/ico;">
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/jquery-confirm.min.css">
+<!--  <link rel="stylesheet" href="static/css/swiper.min.css">-->
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="static/css/layout.css">
+  <!-- js -->
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/jquery-confirm.min.js"></script>
+<!--  <script src="static/js/swiper.min.js"></script>-->
+  <script src="static/js/clipboard.min.js"></script>
+
+
+</head>
+
+<body>
+<div id="app">
+  
+  <img src="./static/picture/2.gif" alt="" class="top">
+  <div class="download_zone">
+    <div class="bg">
+      <div class="info">
+        <p>站名：9044 （澳門新葡京棋牌）</p>
+        <p>更新时间：2020/11/21</p>
+        <p>下载key：7bb2ad7ac76dc7cf</p>
+        <p>下载参数：固定域名：http://5558533.com 动态邀请码</p>
+        
+      </div>
+      
+      <img src="static/picture/3.png" alt="">
+    </div>
+    <div id="install" class="bgImg" onclick="xinrens()">
+    </div>
+    <div class="buttons" id="down_btn">
+      <a id="down_btn_ios1" href="javascript:downApp()" data-agl-cvt="6"><img src="static/picture/ios_btn.png" alt=""></a>
+      <a id="down_btn_ios2" href="javascript:downApp()" data-agl-cvt="6"><img src="static/picture/and_btn.png" alt=""></a>
+    </div>
+    <!-- <ul class="webs">
+      <li><span class="times"></span><span class="border"></span><span class="web"></span><a href="" target="_blank"></a></li>
+      <li><span class="times"></span><span class="border"></span><span class="web"></span><a href="" target="_blank"></a></li>
+      <li><span class="times"></span><span class="border"></span><span class="web"></span><a href="" target="_blank"></a></li>
+    </ul> -->
+  </div>
+  
+  <div class="bgImg bg4">
+
+  </div>
+
+ <!-- <div class="content">
+    <p style="background: #a90000;color: #cccccc;text-align: center;height:30px;font-size:18px;">关注财产安全，远离赌博</p>
+
+<p></p>
+
+    </div>-->
+
+  </div>
+
+<div class="bar" id="down_btn_ios5" style="position:fixed;bottom: 0;z-index: 999" data-agl-cvt="6" onclick="downApp()">
+  <div class="w640">
+    <img src="static/picture/bottom.gif" alt="">
+  </div>
+</div>
+  <div class="out-mask">
+    <div class="out-panel"><img src="static/picture/close2.png" alt="" class="out-close">
+      <img src="static/picture/fh_img.png" class="out-bg">
+      <a href="javascript:void(0)" class="game-down" onclick="downApp();" data-agl-cvt="6"><img src="static/picture/fh_btn.png" alt=""></a>
+    </div>
+  </div>
+<div id="xinren_list" style="background: rgba(58,41,23,.9);z-index: 999999;">
+  <div class="w750">
+    <a href="javascript:hideXinRen()"><img src="static/picture/close.png" alt=""></a>
+    <img src="static/picture/help.jpg" alt="">
+  </div>
+</div>
+<div class="hide">
+  <iframe src="" id="download_if" frameborder="0"></iframe>
+</div>
+<div id="open_safari">
+  <div class="w750">
+    <p>
+      1.浏览器无法直接下载，请复制以下网址在苹果浏览器safari中打开
+    </p>
+    <p>
+      <a id="copyBtn"><img src="static/picture/copy_btn.png" alt=""></a>
+    </p>
+    <p>2.打开safari浏览器，粘贴并前往后即可下载。</p>
+    <p class="safari_info"><img src="static/picture/safari.png" alt=""></p>
+    <p>
+      <a style="max-width: 30vw;display: block;margin: 10px auto" href="javascript:hideBaiduT();" id="closeBtn"><img src="static/picture/close_btn.png" alt=""></a>
+    </p>
+  </div>
+</div>
+<div class="loadingBox">
+  <div class="LBtitle">提示</div>
+  <div id="download_btn" class="LBcenter">更新版本，请先卸载旧APP，再点击“安装”继续...</div>
+</div>
+  <!-- <a class="kf" id="kf" href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001070&planId=71#" target="_blank" style="width: 17.33vw;
+    position: fixed;
+    top: 14.3rem;
+    right: 0;
+    z-index: 8;"><img src="static/picture/kf.png" alt=""></a> -->
+  <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+  <script>
+    function GetQueryString (name) {
+      var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+      var r = window.location.search.substr(1).match(reg)
+      if (r != null) return unescape(r[2])
+      return null
+    }
+    function find (str, cha, num) {
+			var x = str.indexOf(cha);
+			for(var i = 0; i < num; i++) {
+					x = str.indexOf(cha, x+1);
+			}
+			return x;
+    }
+    let str=window.location.href;
+    let code = GetQueryString('channelCode');
+    let par1 = "channelCode=" + code + "&channelDomain=http://5558533.com";
+    let par2 = "channelDomain=http://5558533.com";
+    ShareTrace.init({
+        appkey: "7bb2ad7ac76dc7cf", // 此值必填
+        param: code ? par1 : par2,
+    });
+
+    function downApp (type) {
+      ShareTrace.download();
+    }
+  </script>
+  <script type="text/javascript" src="./static/js/script.js"></script>
+  <script>
+    setTimeout(function () {
+      $('.times').eq(0).html(2 + Math.ceil(Math.random() * 3) + 'ms')
+    }, 1000)
+    setTimeout(function () {
+      $('.times').eq(1).html(5 + Math.ceil(Math.random() * 2) + 'ms')
+    }, 1500)
+    setTimeout(function () {
+      $('.times').eq(2).html(8 + Math.ceil(Math.random() * 3) + 'ms')
+    }, 2000)
+    var autourl = new Array()
+    autourl[0] = 'https://q1022.com'
+    autourl[1] = 'https://q1066.com'
+    autourl[2] = 'https://q1099.com'
+
+    document.querySelectorAll('.webs li').forEach(function (item, index) {
+      item.children[3].href = autourl[index] + '/m/#/home?channelCode=' + b
+      item.children[2].innerText = autourl[index]
+    })
+  </script>
+<script type="text/javascript">
+function xinrens() {
+$('#xinren_list').show()
+}
+  var clipboard = new ClipboardJS('#copyBtn',{
+    text: function(){return window.location.origin}
+  });
+
+  clipboard.on('success', function (e) {
+    alert('复制成功')
+    e.clearSelection();
+  });
+  $('#closeBtn').on('click',function () {
+    $('#open_safari').fadeOut();
+  });
+  function setHistory() {
+   history.pushState(null, null, document.URL);
+   setTimeout(function () {
+     window.addEventListener('popstate', function () {
+       $(".out-mask").show();
+       history.pushState(null, null, document.URL);
+     });
+   }, 0);
+  }
+  $('.out-close').click(function () {
+   $(".out-mask").hide();
+  })
+  setHistory();
+
+</script>
+</body>
+
+</html>
