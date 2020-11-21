@@ -38,13 +38,13 @@ function GetQueryString (name) {
   return null
 }
 
-b = GetQueryString('channelCode')
+// b = GetQueryString('channelCode')
 
-if (b == null) {
-  url = window.location.href
-  a = url + '?channelCode=552620&code=1'
-  window.location.href = a
-}
+// if (b == null) {
+//   url = window.location.href
+//   a = url + '?channelCode=552620&code=1'
+//   window.location.href = a
+// }
 
 
 $(document).ready(function () {
