@@ -11,18 +11,22 @@ window.onresize = function () {
   getRem(750, 100)
 };
 
+var baseUrl = 'http://6669789.com/frontend/v1/'
 $.ajax({
   type: "get",
   dataType: "json",
-  // url: `http://fhcp.9161252.com:801/json/UserIndex.json?t=${Date.now()}`,
-  url: `/json/UserIndex.json?t=${Date.now()}`,
+  url: baseUrl + 'config',
   success: function (result) {
-    var serviceList = JSON.parse(result.config.siteConfig).service
-    for (let i = 0; i < serviceList.length; i++) {
-      if(serviceList[i].status === 'on') {
-        $('.kefu_a').show()
-        $('.kefu_a').attr('href',serviceList[i].url)
-        return false
+    if(result.code === 200) {
+      var serviceList = result.data.siteConfig.service
+      if(serviceList && serviceList.length) {
+        for (let i = 0; i < serviceList.length; i++) {
+          if(serviceList[i].status === 'on') {
+            $('.kefu_a').show()
+            $('.kefu_a').attr('href',serviceList[i].url)
+            return false
+          }
+        }
       }
     }
   },
@@ -71,8 +75,7 @@ $(function () {
       $.ajax({
         type: "get",
         dataType: "json",
-        // url: "http://fhcp.9161252.com:801/frontend/v1/getTCode",
-        url: "/frontend/v1/getTCode",
+        url: baseUrl + 'getTCode',
         data: {
           userName: $('#username').val()
         },
@@ -80,6 +83,8 @@ $(function () {
           if(result.code === 200) {
             layer.closeAll('loading');
             $('.verify_all').show()
+            $('.slide-verify-block').show()
+            $('.loading_verify').hide()
             $('.slide-verify-img').attr("src",`${result.data.img1}`)
             $('.slide-verify-block').attr("src",`${result.data.img2}`)
           }

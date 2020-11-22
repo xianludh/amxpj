@@ -43,8 +43,7 @@ $(function () {
       $.ajax({
         type: "post",
         dataType: "json",
-        // url: "http://fhcp.9161252.com:801/frontend/v1/checkTCode",
-        url: "/frontend/v1/checkTCode",
+        url: baseUrl + "checkTCode",
         data: {
           tnCode: Math.round(setLeftX * 2 / (document.body.offsetWidth / 375)),
           userName: $('#username').val()
@@ -53,9 +52,6 @@ $(function () {
           if(result.code === 200) {
             $('.slide-verify-slider').addClass('container-success')
             checkName()
-            closeVerify()
-            $('.verify_all').hide()
-            $('.loading_verify').hide()
           } else {
             $('.slide-verify-slider').addClass('container-fail')
             setTimeout(() => {
@@ -73,21 +69,16 @@ $(function () {
     }
   }
 
-  function closeVerify() {
-    $('.verify_all').hide()
-    $('.loading_verify').hide()
-  }
-
   function checkName() {
     $.ajax({
       type: "post",
       dataType: "json",
-      // url: "http://fhcp.9161252.com:801/frontend/v1/checkUsername/"+$('#username').val()+"",
-      url: "/frontend/v1/checkUsername/"+$('#username').val()+"",
+      url: baseUrl + "checkUsername/"+$('#username').val()+"",
       success: function (result) {
+        reset()
+        $('.verify_all').hide()
         if(result.code === 200) {
           register()
-          reset()
         }else {
           setTimeout(() => {
             layer.msg(result.message)
@@ -111,13 +102,12 @@ $(function () {
         phone: $('#phone').val(),
         device: 'h5'
       },
-      // url: "http://fhcp.9161252.com:801/frontend/v1/userRegister",
-      url: "/frontend/v1/userRegister",
+      url: baseUrl + "userRegister",
       success: function (result) {
         if(result['code'] === 200) {
           layer.msg('注册成功');
           setTimeout(() => {
-            window.location.href = "/"
+            window.location.href = "http://6669789.com"
           }, 1500);
         }else {
           layer.msg(result.message);
@@ -130,6 +120,7 @@ $(function () {
   }
 
   function reset() {
+    $('.loading_verify').show()
     $('.slide-verify-slider').removeClass('container-active')
     $('.slide-verify-slider').removeClass('container-success')
     $('.slide-verify-slider').removeClass('container-fail')
@@ -138,21 +129,20 @@ $(function () {
     $('.slide-verify-img').attr("src",'./img/loading_bg.png')
     $('.slide-verify-block').attr("src",'')
     $('.slide-verify-block').hide()
-    $('.loading_verify').show()
   }
 
   function getTCode() {
     $.ajax({
       type: "get",
       dataType: "json",
-      url: "http://fhcp.9161252.com:801/frontend/v1/getTCode",
+      url: baseUrl + "getTCode",
       data: {
         userName: $('#username').val()
       },
       success: function (result) {
         if(result.code === 200) {
-          $('.loading_verify').hide()
           layer.closeAll('loading');
+          $('.loading_verify').hide()
           $('.slide-verify-img').attr("src",`${result.data.img1}`)
           $('.slide-verify-block').attr("src",`${result.data.img2}`)
           $('.slide-verify-block').show()
@@ -181,6 +171,6 @@ $(function () {
   })
 
   $('.close-btn').click(function () {
-    closeVerify()
+    $('.verify_all').hide()
   })
 })
