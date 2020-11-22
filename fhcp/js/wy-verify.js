@@ -40,7 +40,7 @@ function initCheck(id){
                             console.log(res);
                             setTimeout(()=>{
                                 safeStatus = false;
-                                window.location.href = 'http://fhcp.9161252.com:801/';
+                                window.location.href = 'http://6669789.com';
                                 $('.newBox3').css('display','none');
                                 captchaIns.refresh();
                             },1000)

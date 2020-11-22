@@ -1,4 +1,4 @@
-var url = 'http://fhcp.9161252.com:801/frontend/v1/';
+var url = 'http://6669789.com/frontend/v1/';
 var msgConfirm = false; // 短信验证
 var imgConfirm = false; // 图片验证码
 var codeIn = false; // 邀请码
@@ -265,7 +265,7 @@ function registerSubmit() {
         success: function (res) {
             if (res.code == 200) {
                 showTips(res.message);
-                window.location.href = 'http://fhcp.9161252.com:801/';
+                window.location.href = 'http://6669789.com';
             } else {
                 showTips(res.message);
                 getCode();
