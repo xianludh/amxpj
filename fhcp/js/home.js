@@ -1,4 +1,4 @@
-var url = 'http://p2345.vip/frontend/v1/';
+var url = 'http://fhcp.9161252.com:801/frontend/v1/';
 var msgConfirm = false; // 短信验证
 var imgConfirm = false; // 图片验证码
 var codeIn = false; // 邀请码
@@ -16,6 +16,12 @@ var code_invitecode = ''; // 邀请码
 var safeCheck = 0;
 var safeStatus = false;
 var Verify = 'slideVerify';
+function isMobile() {
+    return !!(navigator.userAgent.match(
+      /(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+    ))
+}
+    
 
 function showTips(text){
     $('.tipsLog').show();
@@ -259,7 +265,7 @@ function registerSubmit() {
         success: function (res) {
             if (res.code == 200) {
                 showTips(res.message);
-                window.location.href = 'http://p2345.vip';
+                window.location.href = 'http://fhcp.9161252.com:801/';
             } else {
                 showTips(res.message);
                 getCode();

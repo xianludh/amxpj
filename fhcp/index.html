@@ -108,7 +108,13 @@
 <script>
     
     window.onload =function(){
-        
+        if (isMobile() !== false) {
+            if (location.href.indexOf('#') > -1) {
+                location.href = "./m/index.html"+ location.search
+            } else {
+                location.href = "./m/index.html"+ location.search
+            }
+        }
         agent = GetQueryString('agent') || GetQueryString('k');
         code_invitecode = agent;
         incodeReadonly = !!agent

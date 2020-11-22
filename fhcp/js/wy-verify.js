@@ -40,8 +40,9 @@ function initCheck(id){
                             console.log(res);
                             setTimeout(()=>{
                                 safeStatus = false;
-                                window.location.href = 'http://p2345.vip';
+                                window.location.href = 'http://fhcp.9161252.com:801/';
                                 $('.newBox3').css('display','none');
+                                captchaIns.refresh();
                             },1000)
                         }else{
                             captchaIns.refresh();

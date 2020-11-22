@@ -128,7 +128,7 @@ function bindEvents() {
                         if (res.code === 200) {
                             // containerSuccess = true;
                             $('.slide-verify-slider').addClass('container-success');
-                            window.location.href = 'http://p2345.vip';
+                            window.location.href = 'http://fhcp.9161252.com:801/';
                             $('.newBox3').css('display','none');
                         } else {
                             // containerFail = true;
@@ -177,7 +177,7 @@ function touchEndEvent(e) {
             success: function (res) {
                 if(res.code==200){
                     $('.slide-verify-slider').addClass('container-success');
-                    window.location.href = 'http://p2345.vip';
+                    window.location.href = 'http://fhcp.9161252.com:801/';
                     $('.newBox3').css('display','none');
                     safeStatus=false;
                     return;
