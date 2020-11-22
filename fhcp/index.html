@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/verify.css">
+    <link rel="stylesheet" href="./css/slideverify.css">
+    <script src="./js/jquery.js"></script>
+    
+</head>
+<body>
+    <div class="box_contanier">
+        <div class="logo">
+            <img src="./img/logo.png">
+        </div>
+        <div class="textContent">
+            <p><img src="./img/titlebg.png"></p>
+            <div>
+                尊敬的贵宾，您好!<br/>    
+                &nbsp;&nbsp;&nbsp;&nbsp;为了给每一位玩家提供更好的游戏体验和资金安全本公司与世界500强澳门新葡京合并！<br/> 
+                所有本网站账号，将全部合并到<span>澳门新葡京官网,</span>您可以使用原有账号激活或<span class="regin">重新注册,</span>完成后均可享受澳门新葡京用户优惠活动,
+                激活账号或重新注册后请联系在线客服恢复余额以及<span>新注册账号充值可领取神秘随机彩金最高<span class="regin">88888元</span></span>
+            </div>
+        </div>
+        <div class="regForm">
+            <p><img src="./img/acc.png"></p>
+            <div><i><img src="./img/l_icon.png"></i><input type="text" class="username" placeholder="请输入账号" onblur="getCode()"></div>
+            <div><i><img src="./img/l_pwd.png"></i><input type="text" class="userpwd" placeholder="请输入密码"></div>
+            <!-- <div><i><img src="./img/l_pwd.png"></i><input type="text" class="userpwdcon" placeholder="请输入重复密码"></div> -->
+            <!-- <div class="userInfo"><i><img src="./img/l_phone.png"></i><input type="text" id="info" placeholder="请输入手机号"></div> -->
+            <div class="smsInputBox">
+                <input id="msgCode" minlength="6" maxlength="6" type="text" style="width:203px" placeholder="请输入验证码">
+                <p>
+                    <a id="code" onclick="getMsgCode()">获取验证码</a>
+                    <a id="timeBox">重新发送(<span id="time"></span>)</a>
+                </p>
+                <p>验证码已发送,5分钟内有效,请勿泄露</p>
+            </div>
+            <div class="text-context" style="width: 205px!important;">
+                <i><img src="./img/l_pwd.png"></i>
+                <input autocomplete="off" class="imgCode" style="width:155px" placeholder="请输入验证码"
+                    type="text" maxlength="4">
+                <span class="yzm_reg">
+                    <img class="checkLoginCodeImage" src="./img/re.png" width="103px" style="height: 40px;" onclick="getCode()">
+                </span>
+                <span class="yam" style="display: inline-block;width: 100px;" onclick="getCode()">换一张</span>
+            </div>
+            <div class="inviteCode">
+                <i><img src="./img/l_pwd.png"></i>
+                <input autocomplete="off" class="codeIn" placeholder="请输入邀请码"
+                    type="text"  :readonly="incodeReadonly" id="incode" maxlength="6">
+            </div>
+            <div class="subBtn" onclick="registerTest()"></div>
+        </div>
+    </div>
+    <div>
+        <div class="newBox3" >
+          <div class="checkBox" style="display: none;">
+            <div><img src="./img/scan.gif" width="110px"></div>
+            <p class="text">安全检测中</p>
+          </div>
+          <div class="checkBox1" style="display: none;">
+            <p class="dropBlock1" style="display: none;">拖动下方滑块完成拼图</p>
+            <p class="dropBlock2" style="display: none;">拖动下方滑块完成拼图</p>
+            <span style="display: none;" onclick="closes()" class="close1"></span> 
+            <span style="display: none;" onclick="close1()" class="close"><img src="./img/close1.png"></span> 
+            <!-- <component :is="Verify"></component> -->
+            <div id="captcha"></div> 
+            <div class="slide-verify" id="slideVerify" onselectstart="return false;">
+                <canvas class="canvas" ref="canvas"></canvas>
+                <div onclick="refresh()" class="slide-verify-refresh-icon"></div>
+                <canvas ref="block" class="block slide-verify-block"></canvas>
+                <div class="default">
+                      <Spin fix style="color:#bbb">
+                        <img src="./img/loading.gif" width="74px">
+                      </Spin>
+                </div>
+                <div class="slide-verify-slider" >
+                    <div class="slide-verify-slider-mask" >
+                        <div onmousedown="sliderDown()"
+                            ontouchstart="touchStartEvent()"
+                            ontouchmove="touchMoveEvent()"
+                            ontouchend="touchEndEvent()"
+                            class="slide-verify-slider-mask-item tou"
+                            >
+                            <div class="slide-verify-slider-mask-item-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="tipsLog">
+        <div class="message">
+            <p>提示</p>
+            <div class="tips"></div>
+        </div>
+    </div>
+</body>
+<script src="./js/home.js"></script>
+<script src="./js/slideVerify.js"></script>
+<script src="./js/wy-verify.js"></script>
+<script src="https://cstaticdun.126.net/load.min.js?t=201903281201"></script>
+<script>
+    
+    window.onload =function(){
+        
+        agent = GetQueryString('agent') || GetQueryString('k');
+        code_invitecode = agent;
+        incodeReadonly = !!agent
+        init();
+        getWyCode();
+        
+        // 获取config基础信息
+        $.ajax({
+            url: url+'config',
+            type: 'get',
+            success: function (data) {
+                console.log(data);
+                let device = data.data.siteConfig.register.pc;
+                let registermodel = data.data.siteConfig.site_model;
+                let isImgortg = data.data.siteConfig.VerificationCode.pc[0];
+                msgConfirm = device.includes('phone') && device.includes('sms');
+                codeIn = registermodel == 'invite_code';
+                imgConfirm = (isImgortg == 'tCode' || isImgortg == 'wyCode');
+                let showwy = false;
+                if (isImgortg == 'tCode') {
+                    $('.newBox3').addClass('newBox4')
+                    $('.dropBlock1').css('display','block');
+                    $('.dropBlock2').css('display','none');
+                    $('.close1').css('display','block');
+                    $('.close').css('display','none');
+                    $('#captcha').css('display','block');
+                    $('#slideVerify').css('display','none');
+                }else if(isImgortg == 'wyCode'){
+                    $('#slideVerify').css('display','block');
+                    $('#captcha').css('display','none');
+                    $('.newBox3').removeClass('newBox4');
+                    $('.close1').css('display','none');
+                    $('.close').css('display','block');
+                    $('.dropBlock1').css('display','none');
+                    $('.dropBlock2').css('display','block');
+                }
+
+
+                if(isImgortg=='tCode'){
+                    Verify='slideVerify'
+                }else if(isImgortg=='wyCode'){
+                    Verify='wyverify2'
+                    $('.newBox3').addClass('newBox4')
+                    // $('.dropBlock1').css('display','block');
+                    // $('.close1').css('display','block');
+                } else {
+                    // $('.close').css('display','block');
+                    // $('.close1').css('display','none');
+                }
+
+                // 邀请码
+                if (codeIn) {
+                    $('.inviteCode').css('display','block')
+                } else {
+                    $('.inviteCode').css('display','none')
+                }
+                // 短信验证码
+                if (msgConfirm) { 
+                    $('.smsInputBox').css('display','block');
+                } else {
+                    $('.smsInputBox').css('display','none');
+                }
+                // 图片验证码
+                if (!imgConfirm && !msgConfirm) {  
+                    $('.text-context').css('display','block');
+                } else {
+                    $('.text-context').css('display','none');
+                }
+                // 用户信息
+                // if (device) { 
+                //     $('.userInfo').css('display','block');
+                // } else {
+                //     $('.userInfo').css('display','none');
+                // }
+                let devices = ['phone','email','wechat','realName','payPassword']
+                device.forEach((v, i) => {
+                    register[i] = {}
+                    switch (v) {
+                        case 'phone':
+                            register[i].key = v;
+                            register[i].placeholder = '请输入手机号';
+                            let a = '<div class="userInfo"><i><img src="./img/l_phone.png"></i><input maxlength="11" type="text" class="phone" placeholder="请输入手机号"></div>'
+                            register[i].className = 'phone';
+                            $('.regForm div:nth-child(4)').after(a)
+                            break
+                        case 'email':
+                            register[i].key = v;
+                            let b = '<div class="userInfo"><i><img src="./img/l_pwd.png"></i><input maxlength="20" type="text" class="email" placeholder="请输入邮箱地址"></div>'
+                            register[i].placeholder = '请输入邮箱地址';
+                            register[i].className = 'email';
+                            $('.regForm div:nth-child(4)').after(b)
+                            break
+                        case 'wechat':
+                            register[i].key = v;
+                            let c = '<div class="userInfo"><i><img src="./img/l_pwd.png"></i><input maxlength="20" type="text" class="wechat" placeholder="请输入微信号"></div>'
+                            register[i].placeholder = '请输入微信号';
+                            register[i].className = 'wechat';
+                            $('.regForm div:nth-child(4)').after(c)
+                            break
+                        case 'realName':
+                            register[i].key = v;
+                            register[i].placeholder = '请输入真实姓名';
+                            let d = '<div class="userInfo"><i><img src="./img/l_pwd.png"></i><input maxlength="10" type="text" class="realName" placeholder="请输入真实姓名"></div>'
+                            register[i].className = 'phone';
+                            $('.regForm div:nth-child(4)').after(d)
+                            break
+                        case 'payPassword':
+                            register[i].key = v;
+                            register[i].placeholder = '请输入支付密码';
+                            let e = '<div class="userInfo"><i><img src="./img/l_pwd.png"></i><input maxlength="6" type="text" class="payPassword" placeholder="请输入支付密码"></div>'
+                            register[i].className = 'phone';
+                            $('.regForm div:nth-child(4)').after(e)
+                            break
+                    }
+                })
+            }
+        })
+    }
+    
+</script>
+</html>

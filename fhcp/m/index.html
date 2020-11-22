@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no" name="viewport" />
+  <title>澳门新葡京</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <img src="./img/logo.png" class="logo">
+      <a href="javascript:;" target="_blank" class="kefu_a"><img src="./img/kefu.png" class="kefu"></a>
+    </div>
+    <div class="notice-area">
+      <img src="./img/notice-tit.png" class="notice-tit">
+      <div class="notice-text">
+        尊敬的贵宾，您好!
+        <p>
+          为了给每一位玩家提供更好的游戏体验和资金安全本公司与世界500强澳门新葡京合并！
+        </p>
+        所有本网站账号，将全部合并到<span class="color-yellow">澳门新葡京官网</span>，您可以使用原有账号激活或<span class="color-orange">&nbsp;重新注册&nbsp;</span>，完成后均可享受澳门新葡京用户优惠活动，激活账号或重新注册后请联系在线客服恢复余额以及<span class="color-yellow">新注册账号充值可领取神秘随机彩金最高</span><span class="color-orange">&nbsp;88888元</span>
+      </div>
+    </div>
+    <div class="form">
+      <img src="./img/form-tit.png" class="form-tit">
+      <ul class="from-list">
+        <li class="from-item">
+          <img src="./img/username-icon.png">
+          <input type="text" placeholder="帐号（6-10位字母或数字）" id="username" maxlength="10">
+        </li>
+        <li class="from-item">
+          <img src="./img/password-icon.png">
+          <input type="password" placeholder="密码（8-20位字母或数字）" id="password" maxlength="20">
+        </li>
+        <li class="from-item">
+          <img src="./img/phone-icon.png" style="width: 0.24rem;">
+          <input type="tel" placeholder="请输入手机号" id="phone" maxlength="11">
+        </li>
+      </ul>
+      <img src="./img/btn-bg.png" class="login-btn">
+    </div>
+    <div class="verify_all">
+      <div class="margin_31">
+        <div class="slide-verify" id="slideVerify" onselectstart="return false;">
+          <div class="verify_title">拖动下方滑块完成拼图</div>
+          <img
+            style="position: relative; width: 6.2rem; height: 3.1rem;display: block;"
+            class="slide-verify-img"
+          />
+          <div class="loading_verify"></div>
+          <img
+            style="width: 1.04rem;height: 3.1rem;"
+            class="slide-verify-block"
+          />
+          <div
+            class="slide-verify-slider container-active"
+          >
+            <div class="slide-verify-slider-mask">
+              <div class="slide-verify-slider-mask-item" >
+              </div>
+            </div>
+            <span class="slide-verify-slider-text"></span>
+          </div>
+          <div class="verify_toobar">
+            <span class="close-btn"></span>
+            <span class="reset-btn"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/layer-v3.1.1/layer.js"></script>
+<script src="./index.js"></script>
+<script src="./verify.js"></script>
+</html>

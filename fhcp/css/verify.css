@@ -1,0 +1,220 @@
+@keyframes verifyBefore {
+  0%{
+     background-image: url('/static/public/image/paycheck/1.png'); 
+  }
+  11.11%{
+     background-image: url('/static/public/image/paycheck/1.png'); 
+  }
+  22.22%{
+     background-image: url('/static/public/image/paycheck/2.png'); 
+  }
+  33.33%{
+     background-image: url('/static/public/image/paycheck/3.png'); 
+  }
+  44.44%{
+     background-image: url('/static/public/image/paycheck/4.png'); 
+  }
+  55.55%{
+     background-image: url('/static/public/image/paycheck/5.png'); 
+  }
+  66.66%{
+     background-image: url('/static/public/image/paycheck/6.png'); 
+  }
+  77.77%{
+     background-image: url('/static/public/image/paycheck/7.png'); 
+  }
+  88.88%{
+     background-image: url('/static/public/image/paycheck/8.png'); 
+  }
+  100%{
+     background-image: url('/static/public/image/paycheck/9.png'); 
+  }
+} 
+.newBox3.newBox4{
+  width:100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.6);
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  z-index:10001;
+  display: none;
+  /* display: flex;
+  justify-content:center;
+  align-items:center; */
+  
+}
+.newBox3.newBox4 .checkBox1{
+  width: 352px;
+  height: 298px;
+  
+} 
+.newBox3.newBox4 .checkBox1 p {
+  padding-left: 15px;
+  height: 30px;
+  font-size: 16px;
+  color: #3A3B3D;
+  line-height: 15px;
+  border-bottom: 1px #E6E6E6 solid;
+}
+.checkBox1 p .close1 {
+  width: 15px;
+  height: 21px;
+  display: inline-block;
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+.checkBox1 p .close1 img {
+  position: absolute;
+  top: -61px;
+  width: 39px;
+}
+.newBox3{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    z-index:10001;
+    display: none;
+    /* display: flex;
+    justify-content:center;
+    align-items:center; */
+    
+    
+    
+    
+}
+.newBox3 .checkBox1{
+  position: absolute;
+  width: 684px;
+  height: 582px;
+  background: #fff;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+}
+.newBox3 .checkBox1 p{
+  padding-left: 15px;
+  height: 80px;
+  font-size: 30px;
+  color: #3A3B3D;
+  padding-left: 30px;
+  font-family: "PingFang-SC-Medium";
+  line-height: 50px;
+  border-bottom: 1px #E6E6E6 solid;
+}
+.newBox3 .checkBox1 .move_box{
+  height: 42px;
+  border: 1px dashed black;
+  position: relative;
+  
+}
+.newBox3 .checkBox1 .move_box .move_btn{
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+.newBox3 .question{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 21px;
+  right: 70px;
+  cursor: pointer;
+  
+}
+.newBox3 .question img{
+  width: 40px;
+  height: 40px;
+}
+.newBox3 .close{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 21px;
+  right: 15px;
+  cursor: pointer;
+  
+}
+.newBox3 .close1{
+  width: 23px;
+  height: 17px;
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  /* border: 1px solid red; */
+  background: url(../img/close2.png) no-repeat;
+  background-position: 10px -50px;
+}
+.newBox3 .close img{
+  width: 40px;
+  height: 40px;
+}
+.newBox3 .checkBox{
+  position: absolute;
+  width: 150px;
+  height: 170px;
+  background: #fff;
+  border-radius: 10px;
+  top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+.newBox3 .checkBox div{
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.newBox3 .checkBox .text{
+  position: absolute;
+  bottom: -7px;
+  left: 34px;
+  color: #000;
+}
+.newBox3 .checkBox .verify_loading{
+  width: 112px;
+  height: 112px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: verifyBefore 0.8s linear 0.5s infinite alternate;
+}
+.newBox3 .checkBox .move2{
+  transition: all;
+  -webkit-animation: animateSub 3s linear infinite;
+  -o-animation: animateSub 3s linear infinite;
+  -moz-animation: animateSub 3s linear infinite;
+  animation: animateSub 3s linear infinite;
+}
+@keyframes animateSub {
+  0% {
+    top: 20px;
+    /* // transform:translate(0,0); */
+    box-shadow: none;
+  }
+  100% {
+    top: 110px;
+    /* // transform:translate(0,-5000px); */
+    box-shadow: none;
+  }
+}
