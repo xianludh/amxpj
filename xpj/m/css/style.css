@@ -1,0 +1,159 @@
+body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
+
+.content {
+  width:100%;
+  background:#171717;
+  position: relative;
+}
+.content .banner{
+  width:100%;
+  height: 7.68rem;
+  background: url('../images/bg.png');
+  background-size:100% 100%;
+  padding-top:6.7rem;
+  box-sizing: border-box;
+}
+
+.content .hd {
+  height: 0.8rem;
+  background: #19110E;
+  border-top:1px solid #3D3D3D;
+  border-bottom: 1px solid #3D3D3D;
+  padding-left: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.content .hd .lines {
+  float: left;
+  width:2.4rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.36rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #F8BE83;
+}
+.content .hd .lines span{
+  display: inline-block;
+  width:0.41rem;
+  height: 0.4rem;
+  background: url('../images/xx.png');
+  background-size:100% 100%;
+  vertical-align: middle;
+}
+
+.content .bd{
+  padding-left:0;
+  padding-right:0;
+  text-align: center;
+}
+.content .bd .title {
+  margin-bottom:0.32rem;
+}
+.content .bd .title img {
+  width:100%;
+  height: 2.17rem;
+}
+.content .bd ul{
+  padding-left:.69rem;
+  padding-right:.69rem;
+}
+.content .bd li{
+  margin-bottom:.62rem;
+}
+.content .bd li span {
+  float: left;
+}
+.content .bd .ms{
+  display: inline-block;
+  font-size:0.34rem;
+  height:.8rem;
+  line-height:.8rem;
+  width:1.33rem;
+  text-align:center;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  border-radius:.11rem;
+  background:#9F7F55;
+  color:#fff;
+  margin-right: 0.34rem;
+}
+
+.content .bd .url{
+  width: 3.68rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background: #303030;
+  border-radius: 10px;
+  font-size: 0.4rem;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+
+.content .bd .jt {
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin:0 0.1rem;
+}
+.content .bd .jt img {
+  width:0.74rem;
+  height: 0.3rem;
+  margin:0 0.1rem;
+}
+.content .bd .btn-open{
+  display: inline-block;
+  width:2.1rem;
+  height: 0.8rem;
+  background: url('../images/enter.png');
+  background-size: 100% 100%;
+}
+.content .bd .btn-open a{
+  display:inline-block;
+  width:100%;
+  height: 100%;
+}
+.content .bd .reCheck {
+  display: block;
+  width: 6.6rem;
+  height: 1.1rem;
+  margin:0 auto;
+  background: url('../images/check_btn.png');
+  background-size:100% 100%;
+}
+
+.content .often {
+  width:100%;
+  height: 6rem;
+  background: url('../images/f_bg.png');
+  background-size: 100% 100%;
+  padding:1.2rem 0.1rem 0 0.1rem;
+  box-sizing: border-box;
+}
+.content .often table {
+  border-collapse:collapse;
+}
+.content .often table tr td {
+  width:2.4325rem;
+  height: 1.8rem;
+  background: #1D1D1D;
+  text-align: center;
+  border:1px solid #333;
+}
+
+.content .often table tr td img {
+  width:0.69rem;
+  height: 0.59rem;
+  margin-top:0.08rem;
+}
+.content .often table tr td span {
+  display: block;
+  font-size: 0.32rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #FFFFE8;
+}
+

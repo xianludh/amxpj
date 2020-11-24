@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>澳门威尼斯人</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/ysMarquee.js"></script>
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <style>
+        #demo {
+            overflow:hidden;
+            height:0.8rem; 
+            line-height:0.8rem;
+            width:7rem; 
+            white-space:nowrap;
+            font-size: 0.37rem;
+            font-weight: 500;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">
+                当前浏览器版本太低,建议升级道最新版本
+            </p>
+        <![endif]-->
+  <div class="content">
+    <div class="banner"></div>
+    <div class="hd clearfix">
+        <div class="lines">
+            <span></span> 最新消息：
+        </div>
+        <div id="demo">
+            <div id="demo1"> ms数值越低访问速度越快&nbsp;&nbsp;&nbsp;ms数值越低访问速度越快&nbsp;&nbsp;&nbsp;ms数值越低访问速度越快&nbsp;&nbsp;&nbsp;ms数值越低访问速度越快
+            </div>
+            <div id="demo2"></div>
+        </div>
+    </div>
+    <div class="bd">
+        <div class="title">
+            <img src="./images/title.png" alt="">
+        </div>
+        <ul class="speedlist">
+            <li class="clearfix">
+                <span class="ms" id="sudu1">检测中</span>
+                <span class="url"></span>
+                <span class="jt"><img src="./images/jt_icon.png" alt=""></span>
+                <span class="btn-open">
+                    <a href="" target="_blank"></a>
+                </span>
+            </li>
+            <li class="clearfix">
+                <span class="ms" id="sudu1">检测中</span>
+                <span class="url"></span>
+                <span class="jt"><img src="./images/jt_icon.png" alt=""></span>
+                <span class="btn-open">
+                    <a href="" target="_blank"></a>
+                </span>
+            </li>
+            <li class="clearfix">
+                <span class="ms" id="sudu1">检测中</span>
+                <span class="url"></span>
+                <span class="jt"><img src="./images/jt_icon.png" alt=""></span>
+                <span class="btn-open">
+                    <a href="" target="_blank"></a>
+                </span>
+            </li>
+            <li class="clearfix">
+                <span class="ms" id="sudu1">检测中</span>
+                <span class="url"></span>
+                <span class="jt"><img src="./images/jt_icon.png" alt=""></span>
+                <span class="btn-open">
+                    <a href="" target="_blank"></a>
+                </span>
+            </li>
+            <li class="clearfix">
+                <span class="ms" id="sudu1">检测中</span>
+                <span class="url"></span>
+                <span class="jt"><img src="./images/jt_icon.png" alt=""></span>
+                <span class="btn-open">
+                    <a href="" target="_blank"></a>
+                </span>
+            </li>
+        </ul>
+        <a href="javascript:void (0)" id="refresh" class="reCheck"></a>
+    </div>
+    <div class="often">
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <img src="./images/vip.png" alt="">
+                        <span>VIP</span>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <img src="./images/hd_icon.png" alt="">
+                        <span>活动大厅</span>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <img src="./images/jb_icon.png" alt="">
+                        <span>借呗</span>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <img src="./images/yh_icon.png" alt="">
+                        <span>更多优惠</span>  
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <img src="./images/vip_icon.png" alt="">
+                        <span>VIP俱乐部</span>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <img src="./images/xz_icon.png" alt="">
+                        <span>手机APP下载</span>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <img src="./images/xx_icon.png" alt="">
+                        <span>最新消息</span>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <img src="./images/dl_icon.png" alt="">
+                        <span>代理加盟</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+  </div>
+
+  
+  <script type="text/javascript">
+    var autourl = new Array()
+    autourl[0] = 'bb365t.com'
+    autourl[1] = 'bb365b.com'
+    autourl[2] = 'bb365c.com'
+    autourl[3] = 'bb365g.com'
+    autourl[4] = 'bb365e.com'
+
+ 
+  document.querySelectorAll('.speedlist li').forEach(function (item, index) {
+    item.children[3].children[0].href ='https://'+ autourl[index]
+    item.children[1].innerText = autourl[index]
+  })
+
+  function speed (element) {
+    var tim = 1;
+    for (var i of  document.querySelectorAll(element)) {
+      i.innerText = 3 + tim + Math.ceil(Math.random() * 2) + 'ms'
+      tim += 2
+    }
+  }
+  speed('.ms')
+    
+  
+
+  //文字向左滚动
+  window.onload = function() {
+	var speed=10;//数值越大，速度越慢
+
+    var demo2=document.getElementById("demo2");
+
+    var demo1=document.getElementById("demo1");
+
+    var demo=document.getElementById("demo");
+
+    function MarqueeLeft(){ 
+        if(demo2.offsetWidth-demo.scrollLeft<=0){
+            demo.scrollLeft-=demo1.offsetWidth 
+        }else{ 
+            demo.scrollLeft++ 
+        } 
+    }
+    var MyMar=setInterval(MarqueeLeft,speed); demo.onmouseover=function() {clearInterval(MyMar);} 
+    demo.onmouseout=function() {MyMar=setInterval(MarqueeLeft,speed);} 
+}
+   
+</script>
+
+
+</body>
+
+</html>
