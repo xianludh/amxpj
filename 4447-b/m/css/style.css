@@ -1,0 +1,237 @@
+body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
+
+.content {
+  width:100%;
+  background:#EEE8DE;
+}
+.content .banner{
+  width:100%;
+  height: 9.13rem;
+  background: url('../images/bg.png');
+  background-size:100% 100%;
+}
+.content .bd{
+  padding-left:0;
+  padding-right:0;
+  padding-top:.4rem;
+  padding-bottom:.4rem;
+  text-align: center;
+}
+.content .bd .title {
+  margin-bottom:0.32rem;
+}
+.content .bd .title img {
+  width:5.4rem;
+  height: 0.3rem;
+}
+.content .bd ul{
+  padding-left:.54rem;
+  padding-right:.54rem;
+}
+.content .bd li{
+  margin-bottom:.5rem;
+}
+.content .bd li span {
+  float: left;
+}
+.content .bd .ms{
+  display: inline-block;
+  font-size:0.34rem;
+  height:.9rem;
+  line-height:.9rem;
+  width:1.53rem;
+  text-align:center;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  border-radius:.11rem;
+  background:#fff;
+  color:#CD0500
+}
+.content .bd .lj {
+  height: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin:0 0.1rem;
+}
+.content .bd .lj img{
+  width:0.3rem;
+  height: 0.3rem;
+}
+.content .bd .url{
+  width: 4.2rem;
+  height: 0.92rem;
+  line-height: 0.92rem;
+  background: #FFFFFE;
+  border-radius: 10px;
+  font-size: 0.32rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #0E0E0E;
+}
+.content .bd .url img {
+  width:0.38rem;
+  height: 0.38rem;
+  vertical-align: middle;
+}
+.content .bd .jt {
+  height: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin:0 0.1rem;
+}
+.content .bd .jt img {
+  width:0.72rem;
+  height: 0.32rem;
+}
+.content .bd .btn-open{
+  display: inline-block;
+  width:1.73rem;
+  height: 0.96rem;
+  background: url('../images/enter.png');
+  background-size: 100% 100%;
+}
+.content .bd .btn-open a{
+  display:inline-block;
+  width:100%;
+  height: 100%;
+}
+.content .bd .reCheck {
+  display: block;
+  width: 100%;
+  height: 1.2rem;
+  background: url('../images/check_btn.png');
+  background-size:100% 100%;
+}
+.content .hot .title{
+  height: 1.2rem;
+  padding:0 0.53rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:1px dashed #333;
+}
+.content .hot .title span {
+  font-size: 0.34rem;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #2C2111;
+}
+.content .hot .title span img {
+  width:0.62rem;
+  height: 0.62rem;
+  vertical-align: middle;
+  margin-right: 0.26rem;
+}
+.content .hot .title i {
+  font-size: 0.26rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  font-style: italic;
+  color: #2C2111;
+}
+.content .hot ul {
+  padding:0.36rem 0.53rem 0 0.53rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content .hot ul li {
+  width:1.9rem;
+  height: 1.7rem;
+  border-radius: 10px;
+  background:#fff;
+  margin-bottom: 0.26rem;
+  text-align: center;
+}
+.content .hot ul li img {
+  width:1.6rem;
+  height: 1rem;
+  margin-top:0.1rem;
+}
+.content .hot ul li span {
+  display: block;
+  font-size: 0.26rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #3B1313;
+  margin-top:-0.1rem;
+}
+
+.content .often .title{
+  height: 1.2rem;
+  padding:0 0.53rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:1px dashed #333;
+}
+.content .often .title span {
+  font-size: 0.34rem;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #2C2111;
+}
+.content .often .title span img {
+  width:0.62rem;
+  height: 0.62rem;
+  vertical-align: middle;
+  margin-right: 0.26rem;
+}
+.content .often .title i {
+  font-size: 0.26rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  font-style: italic;
+  color: #2C2111;
+}
+.content .often ul {
+  padding:0.36rem 0.53rem 0 0.53rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content .often ul li {
+  width:2.2rem;
+  height: 1.7rem;
+  background: #fff;
+  margin-bottom: 0.05rem;
+  text-align: center;
+}
+.content .often ul li:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+.content .often ul li:nth-child(4) {
+  border-top-right-radius: 10px;
+}
+.content .often ul li:nth-child(5) {
+  border-bottom-left-radius: 10px;
+}
+.content .often ul li:nth-child(8) {
+  border-bottom-right-radius: 10px;
+}
+.content .often ul li img {
+  width:1.6rem;
+  height: 1rem;
+  margin-top:0.08rem;
+}
+.content .often ul li span {
+  display: block;
+  font-size: 0.32rem;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #432B22;
+  margin-top:-0.1rem;
+}
+.content .footer {
+  height: 1rem;
+  background: #997D4D;
+  margin-top:0.56rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .footer img {
+  width:5.4rem;
+  height: 0.3rem;
+}
