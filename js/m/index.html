@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/xymf.css">
     <script type="text/javascript" src="js/flexible.js"></script>
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-
+    <script src="js/xMarquee.js" type="text/javascript"></script>
     <!-- <script src="js/index.js"></script> -->
     <style>
         #demo {
@@ -127,12 +127,18 @@
     </div>
     <div class="gg"> 
         <span class="zx" style="color:#FEFE00"><img class="tip" src='images/tip1.png' />&nbsp;最新消息</span>
+        <marquee  direction="left" id="marquee" scrolldelay='200'>
+            欢迎莅临金沙娱乐场【J69.com】我们秉承“服务至上，客户第一”的经营理念！竭诚为每一位玩家提供专业、高效、优质的服务！以诚信树立品牌，良心铸就经典，看得到的贴心，领得到的实惠，邀请您的朋友一起加入我们吧！
+        </marquee>
+    </div>
+    <!-- <div class="gg"> 
+        <span class="zx" style="color:#FEFE00"><img class="tip" src='images/tip1.png' />&nbsp;最新消息</span>
         <div id="demo">
-            <div id="demo1"> ms数值越低访问速度越快&nbsp;&nbsp;&nbsp;ms数值越低访问速度越快&nbsp;&nbsp;&nbsp;ms数值越低访问速度越快&nbsp;&nbsp;&nbsp;ms数值越低访问速度越快
-            </div>
+            <div id="demo1">欢迎莅临金沙娱乐场【J69.com】我们秉承“服务至上，客户第一”的经营理念！竭诚为每一位玩家提供专业、高效、优质的服务！以诚信树立品牌，良心铸就经典，看得到的贴心，领得到的实惠，邀请您的朋友一起加入我们吧！
+             </div>
             <div id="demo2"></div>
         </div>
-    </div>
+    </div> -->
     <div class="testing">
         <div class="hd">
             <div class="lines">
@@ -279,27 +285,27 @@
         }
     
       //文字向左滚动
-      window.onload = function() {
+    //   window.onload = function() {
             
 
-            var speed=20;//数值越大，速度越慢
+    //         var speed=20;//数值越大，速度越慢
         
-            var demo2=document.getElementById("demo2");
+    //         var demo2=document.getElementById("demo2");
         
-            var demo1=document.getElementById("demo1");
+    //         var demo1=document.getElementById("demo1");
         
-            var demo=document.getElementById("demo");
+    //         var demo=document.getElementById("demo");
         
-            function MarqueeLeft(){ 
-                if(demo2.offsetWidth-demo.scrollLeft<=0){
-                    demo.scrollLeft-=demo1.offsetWidth 
-                }else{ 
-                    demo.scrollLeft++ 
-                } 
-            }
-            var MyMar=setInterval(MarqueeLeft,speed); demo.onmouseover=function() {clearInterval(MyMar);} 
-            demo.onmouseout=function() {MyMar=setInterval(MarqueeLeft,speed);} 
-        }
+    //         function MarqueeLeft(){ 
+    //             if(demo2.offsetWidth-demo.scrollLeft<=0){
+    //                 demo.scrollLeft-=demo1.offsetWidth 
+    //             }else{ 
+    //                 demo.scrollLeft++ 
+    //             } 
+    //         }
+    //         var MyMar=setInterval(MarqueeLeft,speed); demo.onmouseover=function() {clearInterval(MyMar);} 
+    //         demo.onmouseout=function() {MyMar=setInterval(MarqueeLeft,speed);} 
+    //     }
     </script>
    
 </body>

@@ -82,7 +82,7 @@ body{ background:#131313;font-family:Arial,Helvetica,sans-serif;}
 }
 .gg .zx {
   color:#FEFE00;
-  width: 2.3rem;
+  width: 2.8rem;
   font-size: 0.32rem;
   text-indent: 0.2rem;
 }
@@ -98,7 +98,7 @@ body{ background:#131313;font-family:Arial,Helvetica,sans-serif;}
 .kefu {
   text-align: center;
 }
-.ul2 {padding: 0 0.13rem 1.38rem;display: flex;flex-wrap: wrap;}
+.ul2 {padding: 0 0.13rem 1.33rem;display: flex;flex-wrap: wrap;}
 .ul2 li{
   width: 25%;
   display: flex;
