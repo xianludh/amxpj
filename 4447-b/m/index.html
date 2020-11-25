@@ -7,21 +7,47 @@
     <title>澳门威尼斯人</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <script type="text/javascript" src="js/flexible.js"></script>
-    
-
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
     <style>
-        .box {width: 100%;height: 3rem;transform-style: perserve-3d; margin: 0 auto; position: relative;top:72%;overflow: hidden;}
-        .box img{width:6.4rem;height: 2.7rem; position: absolute; top: 0; transition:all .3s linear;}
-        
-        .box:hover .btn{opacity: 1;}
-    
-        .front {left: -1.5rem;transform: scale(0.8);}
-        .back {left: 5.5rem;transform: scale(0.8);}   
-        .active {left: 1.8rem; transform: scale(1); z-index: 10;}
-        
-      </style>
-    
+    .swiper-container {
+      width: 100%;
+      height: 8rem;
+      top:43%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      transform: scale(0.9);
+    }
+    .swiper-slide-active,.swiper-slide-duplicate-active{
+      transform: scale(1.1);
+      z-index: 10;
+    }
+    .swiper-slide-next {
+        z-index: 2;
+    }
+    .swiper-slide img{
+        width:5.2rem;
+        height: 2.2rem;
+    }
+  </style>
+     
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -31,16 +57,18 @@
         <![endif]-->
   <div class="content">
     <div class="banner">
-        <div class="box">
-            <img class="front" src="./images/banner1.png" alt="PIC">
-            <img class="back" src="./images/banner2.png" alt="PIC">
-            <img class="active" src="./images/banner3.png" alt="PIC">
-            <img class="front" src="./images/banner4.png" alt="PIC">
-            <img class="back" src="./images/banner5.png" alt="PIC">
-            <img class="front" src="./images/banner6.png" alt="PIC">
-            <img class="back" src="./images/banner7.png" alt="PIC">
-            <img class="front" src="./images/banner8.png" alt="PIC">
-        </div>
+        <!-- <div class="banner-box"> -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./images/banner1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/banner2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/banner3.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/banner4.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/banner5.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/banner6.png" alt=""></div>
+                </div>
+            </div>
+        <!-- </div> -->
     </div>
     <div class="bd">
         <div class="title">
@@ -226,8 +254,19 @@
         <img src="./images/f_img.png" alt="">
     </div>
   </div>
-
-  <script type="text/javascript" src="js/slideshow.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      watchSlidesProgress: true,
+      slidesPerView: 3,
+      spaceBetween: -30,
+	  centeredSlides: true,
+      loop: true,
+      autoplay:{
+        delay:3000,
+       disableOnInteraction:false
+        },
+    });
+  </script>
   <script type="text/javascript">
 
     var autourl = new Array()
@@ -246,10 +285,11 @@
   }
   speed('.ms')
     document.getElementById('refresh').onclick = function () {
-            window.location.reload()
+        speed('.ms')
     }   
 
 </script>
+
 
 </body>
 

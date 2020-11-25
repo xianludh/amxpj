@@ -16,6 +16,8 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   padding-top:.4rem;
   padding-bottom:.4rem;
   text-align: center;
+  position: relative;
+  z-index: 20;
 }
 .content .bd .title {
   margin-bottom:0.32rem;
@@ -25,8 +27,8 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   height: 0.3rem;
 }
 .content .bd ul{
-  padding-left:.54rem;
-  padding-right:.54rem;
+  padding-left:.4rem;
+  padding-right:.4rem;
 }
 .content .bd li{
   margin-bottom:.3rem;
@@ -59,7 +61,7 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   height: 0.3rem;
 }
 .content .bd .url{
-  width: 4.2rem;
+  width: 4.5rem;
   height: 0.92rem;
   line-height: 0.92rem;
   background: #FFFFFE;
