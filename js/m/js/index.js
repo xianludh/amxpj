@@ -7,6 +7,7 @@ window.addEventListener('load', function() {
     var point = []
     // 创建点
     var _creatPoint = function (i) {
+
         // 创建方法
         var pointDom = document.createElement('li');
         // 类名
@@ -59,7 +60,6 @@ window.addEventListener('load', function() {
         list.style.transition = "all .3s"
         // 现在在第几张就需要复位第几张
         list.style.marginLeft = -state.index * window.innerWidth + 'px';
-
     }
 
     var _goPrev = function () {
@@ -140,9 +140,9 @@ window.addEventListener('load', function() {
         if (timer === 20) {
             if (state.index === (items.length - 1)) {
                 state.index = -1
-            }
+                list.style.marginLeft = -state.index * window.innerWidth + 'px'
+            } 
             _goNext();
-
         }
         if (timer > 20) {
             timer = 0
