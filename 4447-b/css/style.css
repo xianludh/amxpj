@@ -94,13 +94,16 @@ body {
     justify-content: space-around;
     box-sizing: border-box;
 }
+.content .banner-hot ul li .box:nth-child(2){
+    margin-left:25px;
+}
  .content .banner-hot ul li .box {
-   width: 50%;
-    }
+   width: 48%;
+}
  .content .banner-hot ul li .box .box-img{
-    width: 65px;
+    width: 60px;
     height: 40px;
-    text-align: right;
+    text-align: left;
     margin-right: 12px;
 }
 .content .banner-hot ul li .box  .box-text{
@@ -136,9 +139,9 @@ body {
     position: relative;
 }
 .content .nav .kf {
-    position: absolute;
-    top: -45px;
-    right: -175px;
+    position: fixed;
+    top: 320px;
+    right:12%;
 }
  .content .nav ul {
     height: 100px;

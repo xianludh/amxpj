@@ -34,7 +34,7 @@ window.onload = function(){
 	}
 
 	function timer(){
-	//   console.log(offset)
+	  console.log(offset)
 	  if(offset){
 		return;
 	  }

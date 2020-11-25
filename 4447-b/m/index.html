@@ -16,9 +16,9 @@
         
         .box:hover .btn{opacity: 1;}
     
-        .front {left: -1rem;}
-        .back {left: 5rem;}   
-        .active {left: 2rem; transform: scale(1.1); z-index: 10;}
+        .front {left: -1.5rem;transform: scale(0.8);}
+        .back {left: 5.5rem;transform: scale(0.8);}   
+        .active {left: 1.8rem; transform: scale(1); z-index: 10;}
         
       </style>
     
@@ -185,7 +185,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://vns8033.com/m/#/user/JieBeiCenter" target="_blank">
+                <a href="https://vns8033.com/m/#/home" target="_blank">
                     <img src="./images/jb_icon.png" alt="">
                     <span>免息借呗</span>
                 </a>
@@ -216,7 +216,7 @@
             </li>
             <li>
                 <a href="https://vns8033.com/m/#/home/type/10001?name=%E7%94%B5%E5%AD%90%E6%B8%B8%E8%89%BA&id=10001" target="_blank">
-                    <img src="./images/dl_icon.png" alt="">
+                    <img src="./images/hot_icon.png" alt="">
                     <span>热门游戏</span>
                 </a>
             </li>
@@ -237,13 +237,6 @@
     autourl[3] = 'http://vns27788.com'
     autourl[4] = 'http://vns00zz.com'
 
-    // document.querySelectorAll('.speedlist ul li').forEach(function (item, index) {
-    //     // console.log(789)
-    //     item.children[4].children[0].href = autourl[index]
-    //     item.children[2].innerText = autourl[index]
-    // })
-  
-
   function speed (element) {
     var tim = 1;
     for (var i of  document.querySelectorAll(element)) {
@@ -254,7 +247,7 @@
   speed('.ms')
     document.getElementById('refresh').onclick = function () {
             window.location.reload()
-}
+    }   
 
 </script>
 

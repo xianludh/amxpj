@@ -24,6 +24,8 @@
       height: 250px;
       padding-top:30px;
       box-sizing: border-box;
+      top:0;
+      left:0;
     }
     .swiper-slide {
         width:483px;
@@ -44,19 +46,13 @@
       -webkit-align-items: center;
       align-items: center;
 	  transition: 300ms;
-      transform: scale(0.7);
+      transform: scale(0.8);
       z-index: 10;
     }
 	.swiper-slide-active,.swiper-slide-duplicate-active{
       transform: scale(1);
     }
-    .swiper-slide-next {
-        z-index: 0;
-    }
-
-    .swiper-slide-active{
-         z-index: 999 !important;
-     }
+ 
   </style>
 </head>
 
@@ -84,7 +80,7 @@
                             <div class="box-img fl">
                                 <img src="./images/mg_icon.png" alt="" />
                             </div>
-                            <a href="https://vns8033.com/#/home/slot?navid=9&id=10022" class="box-text fl">
+                            <a href="https://vns8033.com/#/home/slot?navid=9&id=10022" target="_blank" class="box-text fl">
                                 <h1>MG电子</h1>
                                 <span>游戏最多全</span>
                             </a>
@@ -94,7 +90,7 @@
                                 <img src="./images/th_icon.png" alt="" />
                             </div>
                             <a href="https://vns8033.com/#/home/chess?navid=9&id=10694" target="_blank" class="box-text fl">
-                                <h1>天豪棋牌</h1>
+                                <h1>天游棋牌</h1>
                                 <span>万人在线 pk</span>
                             </a>
                         </div>
@@ -186,7 +182,7 @@
                 </li>
                 <li>
                     <a href="https://vns8033.com" target="_blank">
-                        <img src="./images/dl_icon.png" alt="">
+                        <img src="./images/jb_icon.png" alt="">
                         <span>借呗</span>
                     </a>
                 </li>
@@ -346,12 +342,15 @@
 <script src="./m/js/swiper.min.js"></script>
 
 <script type="text/javascript">
-    $(function(){
-        var mySwiper = new Swiper(".swiper-container",{
+    new Swiper(".swiper-container",{
+            followFinge:true,
             loop: true,
             loopedSlides: 5,
             slidesPerView: 'auto',
-            autoplay: true,
+            autoplay:{
+                    delay:3000,
+                    disableOnInteraction:false
+                },
             centeredSlides:true,
             initialSlide :2,
             watchSlidesProgress: true,
@@ -361,10 +360,10 @@
                         var slide = this.slides.eq(i);
                         var slideProgress = this.slides[i].progress;
                         if (Math.abs(slideProgress) > 1) {
-                            var modify = (Math.abs(slideProgress) - 1) * 0.3;
+                            var modify = Math.abs(slideProgress) * 0.15;
                         }
                         translate = slideProgress * modify * 483 + 'px';
-                        scale = 1 - Math.abs(slideProgress) / 4;
+                        scale = 1 - Math.abs(slideProgress) / 5;
                         zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
                         slide.transform('translateX(' + translate + ') scale(' + scale + ')');
                         slide.css('zIndex', zIndex);
@@ -386,7 +385,7 @@
                 }
             }
         })
-    })
+
 </script>
 
 </body>
