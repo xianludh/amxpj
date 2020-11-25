@@ -5,9 +5,11 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   background:#000;
 }
 .content .banner{
-  height: 2.8rem;
+	height: 2.8rem;
+	width:100%;
 	background: #000;
-  box-sizing: border-box;
+	background: url('../images/bg.png');
+  background-size:100% 100%;
 }
 .content .hd {
   height: 0.8rem;
@@ -20,10 +22,10 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
 }
 .content .hd .lines {
   float: left;
-  width:2rem;
+  width:2.5rem;
   height: 0.8rem;
   line-height: 0.8rem;
-  font-size: 0.27rem;
+  font-size: 0.32rem;
   font-family: PingFang SC;
   font-weight: 500;
   color: #F8BE83;
@@ -58,7 +60,7 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   margin-top:0.4rem;
 }
 .content .bk li{
-  margin-bottom:.5rem;
+  margin-bottom:.3rem;
 }
 .content .bk li span {
   float: left;

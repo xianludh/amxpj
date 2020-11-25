@@ -6,10 +6,47 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>开元棋牌</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/flexible.js"></script>
-    
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
     <style>
+			   .swiper-container {
+      width: 100%;
+      height: 2.8rem;
+      /* top:43%; */
+		}
+		
+		.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      transform: scale(0.9);
+    }
+    .swiper-slide-active,.swiper-slide-duplicate-active{
+      transform: scale(1.1);
+      z-index: 10;
+    }
+    .swiper-slide-next {
+        z-index: 2;
+    }
+    .swiper-slide img{
+        width:5.2rem;
+        height: 2.2rem;
+    }
 			.header{
 				background-color: #000000;
 				height: 1.173rem;
@@ -97,7 +134,7 @@
                 margin: 0 auto;
                 height: 0.7rem;
                 line-height: 0.7rem;
-                font-size: 0.27rem;
+                font-size: 0.32rem;
                 font-weight: 500;
                 color: #FFFFFF;
                 overflow:hidden;
@@ -121,7 +158,7 @@
 				<img  src="./images/logo.png">
 			</div>
 			<div class="header-right">
-				<img  src="./images/kf.png">
+				<a href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000775&planId=279#" target="_blank"><img  src="./images/kf.png"></a>
 			</div>
 		</div>
 		<div class="middleP"></div>
@@ -136,11 +173,13 @@
             </div>
         </div>
         <div class="banner">
-            <div class="box">
-                <img class="front" src="./images/banner1.png" alt="PIC">
-                <img class="back" src="./images/banner2.png" alt="PIC">
-                <img class="active" src="./images/banner3.png" alt="PIC">
-            </div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="./images/banner1.png" alt=""></div>
+								<div class="swiper-slide"><img src="./images/banner2.png" alt=""></div>
+								<div class="swiper-slide"><img src="./images/banner3.png" alt=""></div>
+							</div>
+					</div>
 		</div>
 		<div class="bk" style="width: 100%;">
 			<ul class="speedlist">
@@ -149,7 +188,6 @@
 						<span class="ms" id="sudu1">检测中</span>
 						<span class="lj"><img src="./images/bq.png" alt=""></span>
 						<span class="url">
-								https://4447.com
 						</span>
 						<span class="jt"><img src="./images/bq.png" alt=""></span>
 						<span class="btn-open">
@@ -162,7 +200,6 @@
 						<span class="ms" id="sudu2">检测中</span>
 						<span class="lj"><img src="./images/bq.png" alt=""></span>
 						<span class="url">
-								https://4447.com
 						</span>
 						<span class="jt"><img src="./images/bq.png" alt=""></span>
 						<span class="btn-open">
@@ -175,7 +212,6 @@
 						<span class="ms" id="sudu3">检测中</span>
 						<span class="lj"><img src="./images/bq.png" alt=""></span>
 						<span class="url">
-								https://4447.com
 						</span>
 						<span class="jt"><img src="./images/bq.png" alt=""></span>
 						<span class="btn-open">
@@ -188,7 +224,6 @@
 						<span class="ms" id="sudu4">检测中</span>
 						<span class="lj"><img src="./images/bq.png" alt=""></span>
 						<span class="url">
-								https://4447.com
 						</span>
 						<span class="jt"><img src="./images/bq.png" alt=""></span>
 						<span class="btn-open">
@@ -201,7 +236,6 @@
 						<span class="ms" id="sudu5">检测中</span>
 						<span class="lj"><img src="./images/bq.png" alt=""></span>
 						<span class="url">
-								https://4447.com
 						</span>
 						<span class="jt"><img src="./images/bq.png" alt=""></span>
 						<span class="btn-open">
@@ -287,13 +321,23 @@
             </tr>
         </table>
     </div>
-    <div class="footer">
-        <!-- <img src="./images/f_img.png" alt=""> -->
-    </div>
+    <!-- <div class="footer">
+       
+    </div> -->
   </div>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      watchSlidesProgress: true,
+      slidesPerView: 3,
+      spaceBetween: -30,
+	  centeredSlides: true,
+      loop: true,
+      autoplay:{
+        delay:3000,
+       disableOnInteraction:false
+        },
+    });
 
-  <script type="text/javascript">
-  
     var autourl = new Array()
     autourl[0] = 'https://k86780.com'
     autourl[1] = 'https://k85672.com'
@@ -301,104 +345,32 @@
     autourl[3] = 'https://k81237.com'
     autourl[4] = 'https://k81236.com'
 
-    
-        document.querySelectorAll('.speedlist li').forEach(function (item, index) {
-            item.children[4].children[0].href = autourl[index]
-            item.children[2].innerText = autourl[index]
-        })
-    
-    
+    document.querySelectorAll('.speedlist li').forEach(function (item, index) {
+    item.children[4].children[0].href = autourl[index]
+    item.children[2].innerText = autourl[index]
+  })
 
   function speed (element) {
-    var tim = 1;
-    for (var i of  document.querySelectorAll(element)) {
-      i.innerText = 3 + tim + Math.ceil(Math.random() * 2) + 'ms'
-      tim += 2
-    }
-  }
-  speed('.ms')
+        for (var i of  document.querySelectorAll(element)) {
+            i.innerText ='检测中'
+        }  
 
-    document.getElementById('refresh').onclick = function () {
-            window.location.reload()
+      setTimeout(function(){
+        var tim = 1;
+        for (var i of  document.querySelectorAll(element)) {
+        i.innerText = 3 + tim + Math.ceil(Math.random() * 2) + 'ms'
+        tim += 2
         }
-</script>
+      },500)
+    
+  }
+  speed('.ms');
+    document.getElementById('refresh').onclick = function () {
+        speed('.ms');
+    } 
 
-<script>
-    window.onload = function(){
-	//轮播效果
-	var btns = document.getElementsByClassName('btn'),
-		imgs = document.getElementsByClassName('box')[0].getElementsByTagName('img');
-
-	var index = 2 ,
-		front = 0,
-		back = 0,
-		offset = false,
-		timer = setInterval(timer,5000);
-		
-
-
-	for(var i=0;i<btns.length;i++){
-	  (function(i){
-		btns[i].onclick = function(){click(i)};
-	  })(i);
-
-	  btns[i].onmouseover = function(){
-		offset = true;
-	  }
-	  btns[i].onmouseout = function(){
-		offset = false;
-	  }
-	}
-
-	for(var i=0;i<imgs.length;i++){
-	  imgs[i].onmouseover = function(){
-		offset = true;
-	  }
-	  imgs[i].onmouseout = function(){
-		offset = false;
-	  }
-	}
-
-	function timer(){
-	//   console.log(offset)
-	  if(offset){
-		return;
-	  }
-	  else{
-		click(1)
-	  }
-	}
-
-	function click(x){
-	  imgs[index].setAttribute('class','');
-	  if(x === 0){
-	   if(--index < 0){
-		  index = --imgs.length;
-		}
-		front = back = index;
-		if(++front > --imgs.length){front = 0}
-		if(--back < 0){back = --imgs.length}
-		imgs[front].style.zIndex = '1';
-		imgs[back].style.zIndex = '0';
-	  }
-	  else{     
-		if(++index > --imgs.length){
-		  index = 0;        
-		}
-		front = back = index;
-		if(++front > --imgs.length){front = 0}
-		if(--back < 0){back = --imgs.length}
-		imgs[front].style.zIndex = '0';
-		imgs[back].style.zIndex = '1';
-	  }
-	  imgs[index].style.zIndex = '10';
-	  imgs[front].setAttribute('class','front')
-	  imgs[back].setAttribute('class','back')  
-	  imgs[index].setAttribute('class','active');
-	}
-
-		//文字左滚动
-			var speed=20;//数值越大，速度越慢
+    //文字左滚动
+			var speed1=25;//数值越大，速度越慢
 
             var demo2=document.getElementById("demo2");
 
@@ -413,10 +385,10 @@
                     demo.scrollLeft++ 
                 } 
             }
-            var MyMar=setInterval(MarqueeLeft,speed); demo.onmouseover=function() {clearInterval(MyMar);} 
-            demo.onmouseout=function() {MyMar=setInterval(MarqueeLeft,speed);} 
-  }
-</script>
+            var MyMar=setInterval(MarqueeLeft,speed1); demo.onmouseover=function() {clearInterval(MyMar);} 
+            demo.onmouseout=function() {MyMar=setInterval(MarqueeLeft,speed1);} 
+  </script>
+
 
 </body>
 
