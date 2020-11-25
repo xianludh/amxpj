@@ -1,0 +1,237 @@
+body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
+
+.content {
+  width:100%;
+  background:#000;
+}
+.content .banner{
+  height: 2.8rem;
+	background: #000;
+  box-sizing: border-box;
+}
+.content .hd {
+  height: 0.8rem;
+  background: #19110E;
+  border-top:1px solid #3D3D3D;
+  border-bottom: 1px solid #3D3D3D;
+  padding-left: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.content .hd .lines {
+  float: left;
+  width:2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.27rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #F8BE83;
+}
+.content .hd .lines span{
+  display: inline-block;
+  width: 0.43rem;
+  height: 0.4rem;
+  background: url('../images/message.png');
+  background-size:100% 100%;
+  vertical-align: middle;
+}
+.content .bk{
+	height: 9.3rem;
+  padding-left:0;
+  padding-right:0;
+  padding-top:1.73rem;
+	text-align: center;
+	background-image: url(../images/bd.png);
+  background-size: 100%  100%;
+}
+.content .bk .title {
+	margin-top: 300px;
+}
+.content .bk .title img {
+  width:5.4rem;
+  height: 0.3rem;
+}
+.content .bk ul{
+  padding-left:0.26rem;
+  padding-right:0.26rem;
+  margin-top:0.4rem;
+}
+.content .bk li{
+  margin-bottom:.5rem;
+}
+.content .bk li span {
+  float: left;
+}
+.content .bk .ms{
+  display: inline-block;
+  font-size:0.34rem;
+  height:.78rem;
+  line-height:.78rem;
+  width:1.55rem;
+  text-align:center;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  background:#9D7A4C;
+  color:#fff;
+}
+.content .bk .lj {
+  height: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin:0 0.1rem;
+}
+.content .bk .lj img{
+  width:0.24rem;
+  height: 0.24rem;
+}
+.content .bk .url{
+  width: 4.91rem;
+  height: 0.78rem;
+  background: #303030;
+  line-height: 0.78rem;
+  border-radius: 10px;
+  font-size: 0.34rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #fff;
+}
+.content .bk .url img {
+  width:0.38rem;
+  height: 0.38rem;
+  vertical-align: middle;
+}
+.content .bk .jt {
+  height: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin:0 0.1rem;
+}
+.content .bk .jt img {
+  width:0.24rem;
+  height: 0.24rem;
+}
+.content .bk .btn-open{
+  display: inline-block;
+  width: 2.08rem;
+height: 0.78rem;
+line-height:  0.78rem;
+background: #A50004;
+}
+.content .bk .btn-open a{
+  display:inline-block;
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content .bk .btn-open span{
+  color: #fff;
+}
+.content .bk .reCheck {
+  display: block;
+  width: 100%;
+  height: 1.2rem;
+  background: url('../images/check_btn.png');
+  background-size:100% 100%;
+}
+.content .hot .title{
+  height: 1.2rem;
+  padding:0 0.53rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:1px dashed #333;
+}
+.content .hot .title span {
+  font-size: 0.34rem;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #2C2111;
+}
+.content .hot .title span img {
+  width:0.62rem;
+  height: 0.62rem;
+  vertical-align: middle;
+  margin-right: 0.26rem;
+}
+.content .hot .title i {
+  font-size: 0.26rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  font-style: italic;
+  color: #2C2111;
+}
+.content .hot ul {
+  padding:0.36rem 0.53rem 0 0.53rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content .hot ul li {
+  width:1.9rem;
+  height: 1.7rem;
+  border-radius: 10px;
+  background:#fff;
+  margin-bottom: 0.26rem;
+  text-align: center;
+}
+.content .hot ul li img {
+  margin-top:0.36rem;
+  width:0.6rem;
+  height: 0.6rem;
+}
+.content .hot ul li span {
+  display: block;
+  font-size: 0.26rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #3B1313;
+}
+
+.content .often ul {
+  padding:0.36rem 0.53rem 0 0.53rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.content .often {
+  width:100%;
+  height: 5rem;
+  background-size: 100% 100%;
+  padding:1.2rem 0.1rem 0 0.1rem;
+  box-sizing: border-box;
+}
+.content .often table {
+  border-collapse:collapse;
+}
+.content .often table tr td {
+  width:2.4325rem;
+  height: 1.8rem;
+  background: #1D1D1D;
+  text-align: center;
+  border:1px solid #333;
+}
+
+.content .often table tr td img {
+  width:0.69rem;
+  height: 0.59rem;
+  margin-top:0.08rem;
+}
+.content .often table tr td span {
+  display: block;
+  font-size: 0.32rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #FFFFE8;
+}
+.content .footer {
+  height: 1rem;
+  background: #000;
+  /* margin-top:0.56rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
