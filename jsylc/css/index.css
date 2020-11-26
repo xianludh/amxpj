@@ -251,12 +251,12 @@ li a {
   width: 100%;
 }
 #zhen {
-  transition: 0.5s;
-  transform:rotate(-95deg);
-  -ms-transform:rotate(-95deg); 	/* IE 9 */
-  -moz-transform:rotate(-95deg); 	/* Firefox */
-  -webkit-transform:rotate(-95deg); /* Safari 和 Chrome */
-  -o-transform:rotate(-95deg);
+  transition: 0.8s;
+  /* transform:rotate(-95deg);
+  -ms-transform:rotate(-95deg); 
+  -moz-transform:rotate(-95deg); 	
+  -webkit-transform:rotate(-95deg); 
+  -o-transform:rotate(-95deg); */
 }
 .kf {
   width:132px;

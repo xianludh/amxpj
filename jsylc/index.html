@@ -67,7 +67,7 @@
                   <ul>
                       <!-- scrolldelay="150" -->
                       <li><marquee scrolldelay='150'  direction= "left" onmouseover="this.stop()" onmouseout="this.start()">
-                          澳门金沙棋牌欢迎您的到来，我们的优惠不像“高利贷”那么高，但资金一定永远像“瑞士银行”一样安全。我们发誓承诺为每一位客户提供最安全、最公平、最公正的博彩游戏，绝不黑玩家1分钱，日提款支持3000万，顶级信誉，绝对大额无忧。我们7x24小时在线客服将竭诚为您服务，欢迎您的咨询，祝您游戏愉快!
+                        欢迎莅临金沙娱乐场【374.com】我们秉承“服务至上，客户第一”的经营理念！竭诚为每一位玩家提供专业、高效、优质的服务！以诚信树立品牌，良心铸就经典，看得到的贴心，领得到的实惠，邀请您的朋友一起加入我们吧！！如您遇到APP闪退/打不开等问题，烦请您打开我司官网地址【374.com】重新下载即可哟~下载前请您先删除旧版APP后在重新下载，下载登录既有机会可领取588元大红包等您哟
                           </marquee></li>
                   </ul>
               </dd>
@@ -82,7 +82,7 @@
             <ul class="fl ul1">
               <li><a style="color:white" href='https://j10002.com' target="_blank">线路一</a></li>
               <li><a style="color:white" href='https://j10003.com' target="_blank">线路二</a></li>
-              <li><a style="color:white" href='https://j10004.com' target="_blank">线路三</a></li>
+              <li><a style="color:white" href='https://j10007.com' target="_blank">线路三</a></li>
             </ul>
             <div class="jindu fl">
               <img id="zhen" src='image/zhen.png'>
@@ -141,7 +141,7 @@
             <li><a href='https://j10002.com/#/home' target="_blank"><img src='image/3.png' />最新消息</a></li>
             <li><a href='https://j10002.com/#/home' target="_blank"><img src='image/4.png' />邀请好友</a></li>
             <li><a href='https://j10002.com/#/home' target="_blank"><img src='image/5.png' />免息借呗</a></li>
-            <li><a href='https://j10002.com/#/home' target="_blank"><img src='image/6.png' />棋牌游戏</a></li>
+            <li><a href='https://j10002.com/#/home/chess?navid=9&id=0' target="_blank"><img src='image/6.png' />棋牌游戏</a></li>
             <li><a href='https://j10002.com/#/home' target="_blank"><img src='image/7.png' />个人中心</a></li>
             <li><a href='https://j10002.com/#/home/youhui' target="_blank"><img src='image/8.png' />更多优惠</a></li>
           </ul>
@@ -176,21 +176,30 @@
           },100)
         })
   });
-function speed (element) {
+function speed (element) { 
   for (var i of  document.querySelectorAll(element)) {
       i.innerText = '检测中'
   }   
-  console.log(zhen)
-  zhen.style.transform='roate(12deg)'
-  zhen.style.transtion='1s'
+  $('#zhen').css({'transform':'rotate('+(-120)+'deg)'},
+      {'transform':'-ms-transform:rotate('+(-120)+'deg)'},
+      {'transform':'-moz-transform:rotate('+(-120)+'deg)'},
+      {'transform':'-webkit-transform:rotate('+(-120)+'deg)'},
+      {'transform':'-o-transform:rotate('+(-120)+'deg)'})
   setTimeout(function() {
       var tim = 1;
       for (var i of  document.querySelectorAll(element)) {
       i.innerText = 10 + tim + Math.ceil(Math.random() * 5) + 'ms'
       tim += 2;
-      $('#zhen').css('transform','rotate(deg)')
+      var num = 10 + tim + Math.ceil(Math.random() * 5)
+      $('#zhen').css({'transform':'rotate('+(num-120)+'deg)'},
+      {'transform':'-ms-transform:rotate('+(num-120)+'deg)'},
+      {'transform':'-moz-transform:rotate('+(num-120)+'deg)'},
+      {'transform':'-webkit-transform:rotate('+(num-120)+'deg)'},
+      {'transform':'-o-transform:rotate('+(num-120)+'deg)'})
+      
       }   
-  }, 500);
+  }, 600);
+  // $('#zhen').css({'transform':'rotate('+(num-95)%360+'deg)'},{'transition': '1.5s'});
 }
 speed('.ms')
 
@@ -230,7 +239,7 @@ function createDownloadQRCode(arr) {
 	let el1=document.getElementsByClassName("ar")[0];
   let  json={
       el1: el1,
-      url1:'https://j10002.com',
+      url1:'https://j10002.com/#/?register=1',
       size1: 120,
 	}
   setTimeout(function(){
