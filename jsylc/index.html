@@ -7,7 +7,8 @@
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <script src="js/qrcode.js"></script>
-  <script src="js/jquery-1.9.1.min.js"></script>
+  <!-- <script src="js/jquery-1.9.1.min.js"></script> -->
+  <script src="m/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
   <title>金沙娱乐场</title>
   <script>
     if (/AppleWebKit.*Mobile/i.test(navigator.userAgent)
@@ -27,7 +28,10 @@
     <div class="header">
       <img height="56px" src='./image/logo.png' />
       <img height="48px" src='./image/web.png' />
-      <img class="cs" height="45px" src='./image/kefu.png' />
+      <a href="https://vue.livelyhelp.chat/chatWindow.aspx?&j69=325963&siteId=60000502&planId=e297305b-5ad5-4718-8865-6933f8a21993" target="_blank"><img class="cs" height="45px" src='./image/kefu.png' /></a>
+    </div>
+    <div class="kf" id="kf">
+      <a href="https://vue.livelyhelp.chat/chatWindow.aspx?&j69=325963&siteId=60000502&planId=e297305b-5ad5-4718-8865-6933f8a21993" target="_blank"></a>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -76,25 +80,25 @@
           <p class="title txt-a"><img style="width: 580px;" src='image/jsyl.png' /></p>
           <div class="middle over pb30">
             <ul class="fl ul1">
-              <li><a href='https://j10002.com' target="_blank">线路一</a></li>
-              <li><a href='https://j10003.com' target="_blank">线路二</a></li>
-              <li><a href='https://j10004.com' target="_blank">线路三</a></li>
+              <li><a style="color:white" href='https://j10002.com' target="_blank">线路一</a></li>
+              <li><a style="color:white" href='https://j10003.com' target="_blank">线路二</a></li>
+              <li><a style="color:white" href='https://j10004.com' target="_blank">线路三</a></li>
             </ul>
             <div class="jindu fl">
-              <img src='image/zhen.png'>
+              <img id="zhen" src='image/zhen.png'>
               <div class="text">
                 <p class="p1 txt-a">当前最快</p>
                 <p class="p2 txt-a ms">检测中</p>
               </div>
             </div>
             <ul class="fl ul2">
-              <li><a href='https://j10005.com' target="_blank">线路四</a></li>
-              <li><a href='https://j10006.com' target="_blank">线路五</a></li>
-              <li><a href='https://j10007.com' target="_blank">线路六</a></li>
+              <li><a style="color:white" href='https://j10005.com' target="_blank">线路四</a></li>
+              <li><a style="color:white" href='https://j10006.com' target="_blank">线路五</a></li>
+              <li><a style="color:white" href='https://j10007.com' target="_blank">线路六</a></li>
             </ul>
           </div>
           <div class="txt-a"><span id='refresh' class="check cs txt-a ib">重新检测</span></div>
-          <div class="ma"></div>
+          <div class="ma"><div class="ar"></div></div>
         </div>
         <div class="right fl">
           <div class="swiper-container2">
@@ -151,24 +155,42 @@
       Copyright © 金沙娱乐场 · 版权所有2020 Reserved
     </footer>
   </div>
-
 </body>
 
 </html>
 <script type="text/javascript">
+ $().ready(function(){
+      $(window).scroll(function() {
+        console.log(1111)
+        window.setTimeout(function(){
+          var bodyTop = 0;
+          if (typeof window.pageYOffset != 'undefined') {
+            bodyTop = window.pageYOffset;
+          } else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat') {
+            bodyTop = document.documentElement.scrollTop;
+          }
+          else if (typeof document.body != 'undefined') {
+            bodyTop = document.body.scrollTop;
+          }
+          $("#kf").css("top", 230 + bodyTop)
+          },100)
+        })
+  });
 function speed (element) {
   for (var i of  document.querySelectorAll(element)) {
       i.innerText = '检测中'
   }   
-
+  console.log(zhen)
+  zhen.style.transform='roate(12deg)'
+  zhen.style.transtion='1s'
   setTimeout(function() {
       var tim = 1;
       for (var i of  document.querySelectorAll(element)) {
       i.innerText = 10 + tim + Math.ceil(Math.random() * 5) + 'ms'
-      tim += 2
+      tim += 2;
+      $('#zhen').css('transform','rotate(deg)')
       }   
   }, 500);
-  
 }
 speed('.ms')
 
@@ -205,12 +227,11 @@ function createDownloadQRCode(arr) {
           correctLevel : QRCode.CorrectLevel.H
         })
   }
-	let el1=document.getElementsByClassName("ma")[0];
+	let el1=document.getElementsByClassName("ar")[0];
   let  json={
       el1: el1,
       url1:'https://j10002.com',
-			// url1: window.location.origin + '/APP/qygj/m/index.html',
-      size1: 125
+      size1: 120,
 	}
   setTimeout(function(){
 			createDownloadQRCode(json);

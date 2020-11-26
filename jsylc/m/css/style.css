@@ -7,15 +7,14 @@ body{ background:#131313;font-family:Arial,Helvetica,sans-serif;}
 .right .p1 {
   height: 0.45rem;
   line-height: 0.45rem;
-  font-size: 0.36rem;
+  font-size: 0.32rem;
   color: #fff;
-  font-weight: bold;
   padding: 0.45rem 0 0 0;
 }
 .right .p2 {
   height: 0.5rem;
   line-height: 0.5rem;
-  font-size: 0.3rem;
+  font-size: 0.28rem;
   /* font-weight: bold; */
   color: #FFFF00;
 }
@@ -53,8 +52,8 @@ body{ background:#131313;font-family:Arial,Helvetica,sans-serif;}
 .testing .bd{padding-left:0;padding-right:0;padding-top:.31rem;padding-bottom:.3rem}
 .testing .bd ul{padding-left:.8rem;padding-right:.4rem;padding-top:0;padding-bottom:0}
 .testing .bd li{*zoom:1;margin-bottom:.33rem;}
-.testing .bd .ms{float:left;background:#9C784B;font-size:.32rem;height:.83rem;line-height:.83rem;width:1.97rem;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:.24rem;color: #FFFFFF}
-.testing .bd .url{display:block;font-size:.35rem;height:.83rem;line-height:.83rem;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#272727;color: #FFFFFF;text-align: left;padding-left: .3rem}
+.testing .bd .ms{float:left;background:#9C784B;font-size:.32rem;height:.83rem;line-height:.83rem;width:1.6rem;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:.24rem;color: #FFFFFF}
+.testing .bd .url{display:block;font-size:.38rem;height:.83rem;line-height:.83rem;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#272727;color: #FFFFFF;}
 .testing .bd .btn-open{line-height:1;float:right;margin-left:.24rem;font-size:.4rem;height:.83rem;line-height:.83rem;display:block;text-align:center;border:0;background:#A50004;}
 .testing .bd .btn-open a{display:block;padding-left:.4rem;padding-right:.4rem;padding-top:0;padding-bottom:0;color:#fff;font-size: 0.37rem;}
 

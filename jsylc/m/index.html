@@ -162,9 +162,9 @@
         </div>
     </div>
     <div class="hd clearfix">
-        <div class="lines" style=" width:2.3rem">
+        <!-- <div class="lines" style=" width:2.3rem">
             <span class="zx" style="color:#FEFE00; width:2.3rem"><img class="tip" width="0.3rem" src='images/tip.png' />&nbsp;最新消息:</span> 
-        </div>
+        </div> -->
         
     </div>
     <div class="testing">
@@ -314,7 +314,7 @@
 
         document.querySelectorAll('.speedlist li').forEach(function (item, index) {
             item.children[1].children[0].href = autourl[index]
-            item.children[2].innerText = autourl[index]
+            item.children[2].innerText ='www.' + autourl[index].split('//')[1]
         })
     
       function speed (element) {
