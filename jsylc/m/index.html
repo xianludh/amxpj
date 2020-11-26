@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>金沙娱乐场</title>
+    <link rel="stylesheet icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/xymf.css">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/txtscroll.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+    <script type="text/javascript" src="js/txtscroll.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        #demo {
+            overflow:hidden;
+            height:0.8rem; 
+            line-height:0.8rem;
+            width:8rem; 
+            white-space:nowrap;
+            font-size: 0.37rem;
+            font-weight: 500;
+            color: #FFFFFF;
+        }
+
+        /* 轮播 */
+        .carousel {
+            width: 100%;
+            height: 6.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .list {
+            width: 300%;
+            list-style: none;
+        }
+
+        .list::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        .item {
+            width: 375px;
+            float: left;
+        }
+
+        .item img {
+            width: 100%;
+            height: 6.3rem;
+            display: block
+        }
+
+        .point {
+            position: absolute;
+            bottom: 10px;
+            list-style: none;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+
+        .point-item {
+            width: 0.23rem;
+            height: 0.23rem;
+            background: #CCCCCC;
+            border-radius: 50%;
+            margin: 0 8px;
+            opacity: .2;
+            float: left;
+        }
+
+        .point-item.active {
+            opacity: 1;
+            background-color: #006DFF;
+        }
+        .swiper-slide {
+            transform:translate3d(0,0,0)
+        }
+        .swiper-slide img{
+            transform:translate3d(0,0,0)
+        }
+
+        .txt-scroll {
+            width: 7.5rem;
+            height: 0.85rem;
+            line-height: 0.85rem;
+            margin-left:0.2rem;
+            }
+            .scrollbox {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+            }
+            .scrollbox .txt, .scrollbox .txt-clone {
+                display: inline;
+                position: relative;
+                color: #fff;
+                font-size:0.32rem
+            }
+            
+    </style>
+</head>
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">
+                当前浏览器版本太低,建议升级道最新版本
+            </p>
+        <![endif]-->
+    <div class="header">
+        <a href="###" class="logo">
+            <img src="images/logo.png" alt="">
+        </a>
+        <div class="right"><p class="p1">投诉与建议</p><p class="p2">j69tsyx@gmail.com</p></div>
+    </div>
+    
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/banner1.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/banner2.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/banner3.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/banner4.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/banner5.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/banner6.png">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    </div>
+    <!-- <div class="gg"> 
+        <span class="zx" style="color:#FEFE00;width: 2.8rem;"><img class="tip" src='images/tip.png' />&nbsp;最新消息</span>
+        <marquee  direction="left" id="marquee" scrolldelay='350'>
+            欢迎莅临金沙娱乐场,我们秉承“服务至上，客户第一”的经营理念！竭诚为每一位玩家提供专业、高效、优质的服务！以诚信树立品牌，良心铸就经典，看得到的贴心，领得到的实惠，邀请您的朋友一起加入我们吧！
+        </marquee>
+    </div> -->
+    <div class="gg"> 
+        <span class="zx" style="color:#FEFE00; width:2.2rem"><img class="tip" src='images/tip.png' />&nbsp;最新消息</span>
+        <div class="txt-scroll txt-scroll-default">
+            <div class="scrollbox">
+                <div class="txt">
+                    欢迎莅临金沙娱乐场,我们秉承“服务至上，客户第一”的经营理念！竭诚为每一位玩家提供专业、高效、优质的服务！以诚信树立品牌，良心铸就经典，看得到的贴心，领得到的实惠，邀请您的朋友一起加入我们吧！
+                </div>
+            <div class="txt-clone"></div>
+            </div>
+        </div>
+    </div>
+    <div class="hd clearfix">
+        <div class="lines" style=" width:2.3rem">
+            <span class="zx" style="color:#FEFE00; width:2.3rem"><img class="tip" width="0.3rem" src='images/tip.png' />&nbsp;最新消息:</span> 
+        </div>
+        
+    </div>
+    <div class="testing">
+        <div class="hd">
+            <div class="lines">
+                最快网址检测中心<span>LINE DETECTION CENTER</span>
+            </div>
+        </div>
+        <p class="test">通用网址检测</p>
+        <p class="mss">温馨提示,反应时间ms越小, 网站速度越快</p>
+        <div class="bd">
+            <ul class="speedlist">
+                <li>
+                    <span class="ms" id="sudu1">
+                        检测中
+                    </span>
+                    <span class="btn-open">
+                            <a href="" target="_blank">进入游戏</a>
+                    </span>
+                    <span class="url"></span>
+                </li>
+                <li>
+                    <span class="ms" id="sudu1">
+                        检测中
+                    </span>
+                    <span class="btn-open">
+                            <a href="" target="_blank">进入游戏</a>
+                        </span>
+                    <span class="url"></span>
+                </li>
+                <li>
+                    <span class="ms" id="sudu1">
+                        检测中
+                    </span>
+                    <span class="btn-open">
+                            <a href="" target="_blank">进入游戏</a>
+                        </span>
+                    <span class="url"></span>
+                </li>
+                <li>
+                    <span class="ms" id="sudu1">
+                        检测中
+                    </span>
+                    <span class="btn-open">
+                            <a href="" target="_blank">进入游戏</a>
+                        </span>
+                    <span class="url"></span>
+                </li>
+                <li>
+                    <span class="ms" id="sudu1">
+                        检测中
+                    </span>
+                    <span class="btn-open">
+                            <a href="" target="_blank">进入游戏</a>
+                        </span>
+                    <span class="url"></span>
+                </li>
+            </ul>
+            <div class="check" id="refresh"><img id="img" width="60%" src='images/check.png' /></div>
+        </div>
+    </div>
+    <div class="kefu"><a href="https://vue.livelyhelp.chat/chatWindow.aspx?&j69=325963&siteId=60000502&planId=e297305b-5ad5-4718-8865-6933f8a21993" target="_blank"><img width="68%" src='images/kefu.png' /></a></div>
+    <ul class="ul2">
+        <li>
+            <a href="https://j10002.com/m/#/activity/content/?id=3633&app=" target="_blank">
+                <img src='images/8a.png' /><span>全民VIP</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://j10002.com/m/#/admin/login" target="_blank">
+                <img src='images/9a.png' /><span>免息借呗</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://j10002.com/m/#/activity" target="_blank">
+                <img src='images/4a.png' /><span>优惠大厅</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://j10002.com/#/?register=1" target="_blank">
+                <img src='images/6a.png' /><span>APP下载</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://j10002.com/m/#/?homeGameType=10004" target="_blank">
+                <img src='images/10a.png' /><span>棋牌游戏</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://j10002.com/m/#/?homeGameType=10001" target="_blank">
+                <img src='images/12a.png' /><span>电子游戏</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://j10002.com/m/#/?homeGameType=10005" target="_blank">
+                <img src='images/11a.png' /><span>捕鱼游戏</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://j10002.com/m/#/?homeGameType=20002" target="_blank">
+                <img src='images/2a.png' /><span>热门游戏</span>
+            </a>
+        </li>
+    </ul>
+    <footer class="footer">
+        <ul class="ul3">
+            <li><a href="https://vue.livelyhelp.chat/chatWindow.aspx?&j69=325963&siteId=60000502&planId=e297305b-5ad5-4718-8865-6933f8a21993" target="_blank">在线客服</a></li>
+            <li><a href="https://j10002.com/#/?register=1" target="_blank">立即注册</a></li>
+            <li><a href="https://j10002.com/m/#/home" target="_blank">网站首页</a></li>
+        </ul>
+    </footer>
+    <script src="js/swiper.min.js"></script>
+    <script type="text/javascript">
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                disableOnInteraction: false,
+            },
+            // pagination : {
+            //     el:'.swiper-pagination'
+            // } 
+        });
+    </script>
+    <script type="text/javascript">
+    window.onload = function () {
+        let speeds;
+        var u = navigator.userAgent;
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        if(isiOS){
+           speeds = 8;
+        }else if(isAndroid){
+           speeds = 25
+        }
+
+	  	$('.txt-scroll-default').txtscroll({
+	  			'speed': speeds
+	  		  });
+	  };
+
+        var autourl = new Array()
+        autourl[0] = 'https://j10002.com'
+        autourl[1] = 'https://j10003.com'
+        autourl[2] = 'https://j10005.com'
+        autourl[3] = 'https://j10006.com'
+        autourl[4] = 'https://j10007.com'
+
+        document.querySelectorAll('.speedlist li').forEach(function (item, index) {
+            item.children[1].children[0].href = autourl[index]
+            item.children[2].innerText = autourl[index]
+        })
+    
+      function speed (element) {
+        for (var i of  document.querySelectorAll(element)) {
+            i.innerText ='检测中'
+        }   
+        setTimeout(function() {
+            var tim = 1;
+            for (var i of  document.querySelectorAll(element)) {
+            i.innerText = 3 + tim + Math.ceil(Math.random() * 2) + 'ms'
+            tim += 2
+            }   
+        }, 500);
+        // var tim = 1;
+        // for (var i of  document.querySelectorAll(element)) {
+        //   i.innerText = 3 + tim + Math.ceil(Math.random() * 2) + 'ms'
+        //   tim += 2
+        // }
+      }
+      speed('.ms')
+
+      document.getElementById('refresh').onclick = function () {
+            speed('.ms')
+        }
+    
+    </script>
+   
+</body>
+
+</html>
