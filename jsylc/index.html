@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/swiper.min.css">
   <script src="js/qrcode.js"></script>
   <!-- <script src="js/jquery-1.9.1.min.js"></script> -->
-  <script src="m/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
   <title>金沙娱乐场</title>
   <script>
     if (/AppleWebKit.*Mobile/i.test(navigator.userAgent)
@@ -191,17 +191,16 @@ function speed (element) {
   setTimeout(function() {
       var tim = 1;
       for (var i of  document.querySelectorAll(element)) {
-      i.innerText = 10 + tim + Math.ceil(Math.random() * 5) + 'ms'
-      tim += 2;
-      var num = 10 + tim + Math.ceil(Math.random() * 5)
-      $('#zhen').css({'transform':'rotate('+(num-120)+'deg)'},
-      {'transform':'-ms-transform:rotate('+(num-120)+'deg)'},
-      {'transform':'-moz-transform:rotate('+(num-120)+'deg)'},
-      {'transform':'-webkit-transform:rotate('+(num-120)+'deg)'},
-      {'transform':'-o-transform:rotate('+(num-120)+'deg)'})
-      
+        i.innerText = 10  + Math.ceil(Math.random() * 5) + 'ms'
+        var num =i.innerText.replace('ms','')
+        $('#zhen').css({'transform':'rotate('+(num*1.5-120)+'deg)'},
+        {'transform':'-ms-transform:rotate('+(num*1.5-120)+'deg)'},
+        {'transform':'-moz-transform:rotate('+(num*1.5-120)+'deg)'},
+        {'transform':'-webkit-transform:rotate('+(num*1.5-120)+'deg)'},
+        {'transform':'-o-transform:rotate('+(num*1.5-120)+'deg)'})
+        // tim += 2;
       }   
-  }, 600);
+  }, 800);
   // $('#zhen').css({'transform':'rotate('+(num-95)%360+'deg)'},{'transition': '1.5s'});
 }
 speed('.ms')

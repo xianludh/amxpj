@@ -28,19 +28,6 @@ body{ background:#131313;font-family:Arial,Helvetica,sans-serif;}
 .swiper-pagination-bullet{width:.3rem;height:.3rem;display:inline-block;border-radius:100%;background: rgba(255,255,255,0.5);margin-left:.1rem;margin-right:.1rem}
 .swiper-pagination-bullet-active{opacity:1;background:#fff100}
 
-/* 滚动公告 */
-.gonggao{height: 0.85rem;background: #6a593b;position: relative;}
-.gonggao .title{margin-left:0.4rem;color: #eee; font-size: 0.37rem; width: 2.4rem;margin-top: 0.3rem; height: 0.8rem; line-height: 0.5rem;float: left; display: block;}
-.gonggao .title span{display: block;float: left; width:0.5rem; height: 0.5rem;margin-right: 0.2rem}
-.gonggao .title span.ico01{background:url(../images/notice.png) no-repeat; background-size: cover;}
-.gonggao .gundong{color: #b5b5b5; font-size: 0.37rem; overflow: hidden;line-height: 1.1rem}
-
-.xMarquee{height:0.85rem;width:12rem;overflow:hidden;padding-top: 0.3rem;position: absolute;left: 2.8rem; }
-  .xMarquee ol{list-style-type:none; margin:0px; padding:0px; font-size:0.32rem; width:100000%;}
-  .xMarquee ol li{float:left;}
-  .xMarquee ol li a{ color:#e0e4eb; text-decoration:none; line-height:0.5rem;}
-  .xMarquee ol li a:hover{ text-decoration:underline;}
-
 /* 线路检测 */
 .testing{line-height:1;height: 11.64rem;margin:0 0.15rem;background: url(../images/1.png) no-repeat top; background-size: 100% 100%;overflow: hidden;}
 .testing:after{clear:both}
@@ -77,9 +64,9 @@ body{ background:#131313;font-family:Arial,Helvetica,sans-serif;}
 }
 .gg .zx {
   color:#FEFE00;
-  width: 2.3rem;
-  font-size: 0.32rem;
-  text-indent: 0.2rem;
+  width: 2.18rem;
+  font-size: 0.37rem;
+ 
 }
 .gg img {
   vertical-align: middle;
@@ -156,4 +143,5 @@ border-top: 0.04rem solid #343434;
 .ul2 li:nth-child(8){
   border-right: 0;
 }
+
 
