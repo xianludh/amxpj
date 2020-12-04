@@ -1,0 +1,40 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+  <title>纯CSS实现时光光束粒子动态散射背景特效动画</title>
+  <meta name="keywords" content="纯CSS,时光,光束粒子,动态散射,背景,特效动画">
+  <meta name="description" content="纯CSS实现时光光束粒子动态散射背景特效动画代码下载。js代码(www.jsdaima.com)"> 
+  <!-- <script type="text/javascript" src="/static/js/protect.js"></script> -->
+  <!-- <link rel="stylesheet" type="text/css" href="./css/index.css"> -->
+  </head>
+  <body>
+  <div class="container">
+    <video autoplay muted loop class="video" id='video'>
+      <source src='media/Future.mp4' type="video/mp4">
+        您的浏览器不支持此种视频格式。
+    </video>
+  </div>
+  
+  
+  
+  </body></html>
+  <style>
+    html,body{
+      padding: 0;
+      margin: 0;
+    }
+    .video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: -99;
+    }
+  </style>
+  <script>
+    var v = document.getElementById('video');
+    v.playbackRate=0.5
+  </script>
