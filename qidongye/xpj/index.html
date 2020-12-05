@@ -1,90 +1,69 @@
-<html>
-    <head>
-    <meta charset="utf-8">
-    <title>welcome</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Ribbons</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-      *{
-          padding: 0;
-          margin: 0;
-          box-sizing: border-box;
-      }
-      body {
-          background: #000;
-          overflow: hidden;
-      }
-      #canvas {
-        width:100%; 
-        height: 100%;
-      }
-      .box{
-          width: 100%;
-          height: 100%;
-      }
-      .middleBox{
-          width: 100%;
-          height: 220px;
-          position: absolute;
-          top: 55%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-      }
-       .btnBox{
-          width: 100%;
-          margin-top: 100px;
-       }
-      #btn{
-          width: 450px;
-          height: 220px;
-           margin: auto;
-           cursor: pointer;
-      }
-      
-      #btn img{
-          width: 100%;
-          height: 100%;
-        
-      }
-  </style>
-    </head>
-    
-    <body>
-      <script>
-        window.canvasOptions = {
-          //- autoClear: true,
-          autoCompensate: false,
-          autoPushPop: true,
-          canvas: true,
-          centered: true,
-          width: null,
-          height: null
-        };
-      </script>
-      <script src="js/xezbab.js"></script>
-     
-   <div class="box">
-    <canvas id="canvas" width="1169" height="853"></canvas>
-    <div class="middleBox" id="middleBox">
-      <div class="btnBox">
-        <div id="btn"><img src="./btn.png" alt=""/></div>
-      </div>
+        .box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .middleBox {
+            width: 100%;
+            height: 196px;
+            position: absolute;
+            top: 37%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .btnBox {
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        #btn {
+            width: 478px;
+            height: 196px;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        #btn img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="holder"></div>
+    <div class="box">
+        <div class="middleBox" id="middleBox">
+            <div class="btnBox">
+                <div id="btn">
+                    <img src="./btn.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-   </div>
+    <script src="js/index.js"></script>
 
-   <script src="js/script.js"></script>
-   <script>
-       window.onload = function(){
-        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        document.getElementById('middleBox').style.cssText = "top:30%"
-       }else {
-        document.getElementById('middleBox').style.cssText = "top:55%"
-       }
-       function onGw(){
-            window.location.href='./nav/index.html'
-         }
-       }
-       
-   </script> 
+    <script>
+        window.onload = function () {
+            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                document.getElementById('middleBox').style.cssText = "top:28%"
+                document.getElementById('btn').style.cssText = "width:404px;height:166px"
+            } else {
+                document.getElementById('middleBox').style.cssText = "top:30%"
+                document.getElementById('btn').style.cssText = "width:478px;height:196px"
+            }
+        }
+    </script>
+</body>
 
-    
-    
-    </body></html>
+</html>
